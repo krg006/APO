@@ -1,0 +1,8 @@
+.APOShadowbox {
+	width: auto;
+	overflow: auto;
+	background-color: #efefef;
+	margin: 40px auto; 
+	padding: 40px;
+	border: 1px solid #c4c3be;
+}

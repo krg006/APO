@@ -1,0 +1,139 @@
+body {
+	background-color: #fbfbfb;
+	background-image: url(../../images/bg-top.png);
+	background-position: top;
+	background-repeat: repeat-x;
+}
+
+@font-face {
+	font-family: thin_font;
+	src: url(../../font/Roboto-Light.ttf) format('truetype');
+}
+
+@font-face {
+	font-family: thin_font;
+	src: url(../../font/Roboto-Regular.ttf) format('truetype');
+	font-weight: bold;
+}
+
+h1 {
+	font-family: thin_font;
+	font-weight: normal;
+	color: #1e59ae;
+	font-size: 32px;
+	margin: 5px;
+	display: inline;
+	vertical-align: middle;
+	width: auto;
+}
+h2 {
+	font-family: thin_font;
+	font-weight: normal;
+	color: #1e59ae;
+	font-size: 16px;
+	margin: 2px;
+	display: inline;
+	vertical-align: middle;
+	width: auto;
+}
+h3 {
+	font-family: thin_font;
+	font-weight: normal;
+	color: #1e59ae;
+	font-size: 15px;
+	margin: 2px;
+	display: inline;
+	vertical-align: middle;
+	width: auto;
+}
+p {
+	text-indent: 1.5em;
+	text-align: left;
+	font-family: "Helvetica";
+	line-height: 150%;
+	font-size: 15px;
+	vertical-align: middle;
+}
+a {
+	color: #000000;
+}
+a:hover {
+	color:#1e59ae;
+}
+.error a {
+	color: red;
+}
+.error a:hover {
+	color: #fab41d;
+}
+span.error {
+	font-family: "Helvetica";
+	font-size: 14px;
+	color: red;
+}
+span.nice {
+	font-family: "thin_font";
+	font-size: 13px;
+}
+span.nice a {
+	color: #ffffff;
+	text-decoration: underline;
+}
+span.nice a:hover {
+	color: #1e59ae;
+	text-decoration: underline;
+}
+br {
+   display: block;
+   margin-top: 10px 0;
+   line-height: 20px;
+}
+
+#header {
+	top: 0px; 
+	width:100%; 
+	clear:both;
+	margin-bottom: 10px;
+}
+
+#body {
+	width: 100%;
+	margin-top: 20px;
+}
+
+a.navlist {
+	text-decoration: none;
+	font-family: thin_font;
+	color: black;
+	font-size: 18px;
+}
+
+#navlist {
+	overflow: auto;
+}
+
+#navlist ul {
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+#navlist li{
+	width:170px;
+	list-style-type: none;
+	display:inline;
+	text-align:center;
+	padding-left: 20px;
+}
+
+#navlist li:hover a {
+	color: #1e59ae;
+}
+
+.divider{
+    position:absolute;
+    left:50%;
+    top:10%;
+    bottom:10%;
+    border-left:1px solid #c8c8c8;
+}

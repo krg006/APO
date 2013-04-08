@@ -1,0 +1,32 @@
+input[type="text"].APOInput, 
+input[type="password"].APOInput {
+	width: 336px;
+	height: 36px;
+	font-family: thin_font;
+	font-size: 14px;
+	display: block;
+	padding: 0 10px 0 10px;
+	color: #777777;
+	border: 1px solid #c4c3be;
+}
+
+input[type="text"].APOInput:hover, 
+input[type="password"].APOInput:hover {
+	outline: none;
+	border: 1px solid #c4c3be;
+	color: #005791;
+	-moz-box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
+
+input[type="text"].APOInput:focus, 
+input[type="password"].APOInput:focus {
+	outline: none;
+	border:1px solid #fab41d;
+	color: #000000;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+

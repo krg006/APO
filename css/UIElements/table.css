@@ -1,0 +1,46 @@
+.APOTable {
+	font-family: thin_font;
+	font-size:11px;
+	color: #333333;
+	border: 1px solid #cccccc;
+	border-collapse: collapse;
+	table-layout: fixed;
+}
+
+[header="yes"].APOTable {
+	margin-top: 20px;
+}
+
+.APOTable th {
+	background-color: #dedede;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #cccccc;
+	font-size: 14px;
+	font-weight: bold;
+	height: 40px;
+	padding: 0px;
+}
+
+.APOTable tr {
+	background-color: #f9f9f9;
+	font-size: 13px;
+	height: 35px;
+}
+
+.APOTable tr a {
+	text-decoration: none;
+}
+
+.APOTable tr:hover a {
+	text-decoration: underline;
+}
+
+.APOTable tr:hover {
+	background-color: #f0f0f0;
+}
+
+.APOTable td {
+	padding: 8px 0px;
+	border: 1px solid #cccccc;
+}

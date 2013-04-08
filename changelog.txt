@@ -1,0 +1,45 @@
+*=====================================*
+*              CHANGELOG              *
+*=====================================*
+
+*---------------------------
+	March 14-30, 2013
+	
+	- Implemented login functionality w/ APOTest database
+	- Began construction of dashboard layout
+	- Profile picture section complete w/ rollover to offer new pic choice (actual picking to come)
+----------------------------
+
+*---------------------------
+    March 14, 2013
+
+	- Polished off the code, made it more presentable
+
+----------------------------
+
+*---------------------------
+	March 6, 2013
+
+	- Finished Members section presentation (no functionality yet)
+	- Styled inputs and buttons for Members' login section
+
+----------------------------
+
+*---------------------------
+	March 3, 2013
+
+	- Updated site structure w/ navigation: Home, Blog, Calendar, About, Members
+	- Added photo slideshow to homepage. This will be highlight pictures, with a separate gallery available later.
+	- Added placeholder data to Blog, Calendar, About, Members
+	- Homepage done?
+
+----------------------------
+
+*---------------------------
+	February 28, 2013
+
+	- Created initial framework of website: Home, Members, Calendar, Photos
+	- Members will be a page for each member to login and keep track of stuf they've done
+	- Created html file for each page, with boilerplate code in place
+
+----------------------------
