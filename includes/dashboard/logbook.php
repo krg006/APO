@@ -1,21 +1,40 @@
+
+
 <?php
 	if ((isset($_GET['show']) && $_GET['show'] == 'enter_hours')) {
 ?>
-		<div class="popupBox2" id="popupTest" style="width: 436px; margin-left: -218px; height: 130px; margin-top: -65px;">
+		<div class="popupBox2" id="popupTest" style="width: 436px; margin-left: -218px; height: 350px; margin-top: -175px;">
 			<div class="boxheader">
 				<div class="title">
-					Popup Test
+					Enter Hours
 				</div>
 				<div class="x" onclick='killPopup("popupTest", "shade2")'>
 					<img src="../images/x.png" />
 				</div>
 			</div>
 			<div class="boxbody">
-				Test popup!<br>
-				Active user is <?php echo user_get_first_name($_SESSION['username']); ?>.
+				<form action="members.php?enter_hours=true" method="post" style="margin: 29px auto;">
+					<ul style="list-style-type: none;">
+						<li style="margin-bottom: 24px;">
+							Event name: <br>
+							<input class="APOInput" align="left" type="text" placeholder="Blood drive" name="event_name" />
+						</li>
+						<li style="margin-bottom: 24px;">
+							<div style="float: left">
+								Date attended: <br>
+								<input style="width: 216px;" class="APOInput" type="text" id="datepicker" readonly="true" placeholder="12/15/2013" name="event_date" />
+							</div>
+							<div style="float: left; margin-left: 12px;">
+								Hours attended: <br>
+								<input style="width: 108px;" class="APOInput" type="text" placeholder="1.5" name="num_hours" />
+							</div>
+						</li>
+						<input class="APOButton" buttonColor="blue" type="submit" style="float:right; margin: 40px; margin-bottom: 0px;" value="Submit" />
+					</ul>
+				</form>
 			</div>
-			<div class="boxfooter">
-				<button class="APOButton" buttonColor="gray" type="button" onclick='killPopup("popupTest", "shade2")'>Close</button>
+			<div class="boxfooter" style="margin: 29px;">
+				By submitting these hours, you verify they are accurate.
 			</div>
 		</div>
 		<div id="shade2" onclick='killPopup("popupTest", "shade2")'></div>
@@ -107,4 +126,14 @@
 
 <script type="text/javascript">
 	$('.scroll-pane').perfectScrollbar();
+	$(function(){
+		$('#datepicker').datepicker({
+			inline: true,
+			showOtherMonths: true,
+			dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+		});
+	});
+	$(function () {
+      $('.default').dropkick();
+	});
 </script>

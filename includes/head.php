@@ -11,6 +11,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/UIElements/popup.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="../css/UIElements/table.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="../css/UIElements/perfect-scrollbar.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="../css/UIElements/datepicker.css" media="screen" />
 	
 	<link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="../css/blog.css" media="screen" />
