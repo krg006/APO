@@ -15,6 +15,7 @@
 		
 		<tr style="display: block; margin-bottom: 40px;">
 			<td colspan="2">
+				<?php include 'upcoming_service_events.php' ?>
 			</td>
 		</tr>
 	</table>

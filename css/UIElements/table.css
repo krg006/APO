@@ -43,4 +43,10 @@
 .APOTable td {
 	padding: 8px 0px;
 	border: 1px solid #cccccc;
+	text-align: center;
+}
+
+.APOTable tr td:first-child {
+	text-align: left;
+	text-indent: 8px;
 }

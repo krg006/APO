@@ -23,6 +23,7 @@
 	<script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="../js/perfect-scrollbar.js"></script>
+	<script type="text/javascript" src="../js/popups.js"></script>
 	
 	<title>Alpha Phi Omega | Iota Kappa Chapter</title>
 </head>

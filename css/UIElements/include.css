@@ -70,6 +70,13 @@ span.error {
 	font-family: "Helvetica";
 	font-size: 14px;
 	color: red;
+	display: none;
+}
+span.smallerror {
+	font-family: "Helvetica";
+	font-size: 12px;
+	color: red;
+	display: none;
 }
 span.nice {
 	font-family: "thin_font";

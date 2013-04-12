@@ -9,28 +9,17 @@ $(document).ready(function() {
 });
 
 function showPopup(popupID, shadeID) {
-	
-	if (!$(".popupBox2#" + popupID).is(":visible")) {
-		$(".popupBox2#" + popupID).show();
-		$("#" + shadeID).show();
-	}
+	$('#' + popupID).show();
+	$('#' + shadeID).show();
 }
-
+		
 function killPopup(popupID, shadeID) {
-	
-	if ($(".popupBox2#" + popupID).is(":visible")) {
-		$(".popupBox2#" + popupID).hide();
-		$("#" + shadeID).hide();
-	}
+	$('#' + popupID).hide();
+	$('#' + shadeID).hide();
+	$('#' + popupID + ' #form_register input').val('');
 }
 
-function togglePopup(popupID, shadeID, extraInfo) {
-	
-	if (!$(".popupBox2#" + popupID).is(":visible")) {
-		$(".popupBox2#" + popupID).show();
-		$("#" + shadeID).show();
-	} else {
-		$(".popupBox2#" + popupID).hide();
-		$("#" + shadeID).hide();
-	}
+function killAllPopups(shadeID) {
+	$('.popupBox').hide();
+	$('#' + shadeID).hide();
 }

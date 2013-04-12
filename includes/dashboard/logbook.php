@@ -1,5 +1,3 @@
-
-
 <?php
 	if ((isset($_GET['show']) && $_GET['show'] == 'enter_hours')) {
 ?>
@@ -8,7 +6,7 @@
 				<div class="title">
 					Enter Hours
 				</div>
-				<div class="x" onclick='killPopup("popupTest", "shade2")'>
+				<div class="x" onclick='window.location.href="members.php"'>
 					<img src="../images/x.png" />
 				</div>
 			</div>
@@ -37,15 +35,10 @@
 				By submitting these hours, you verify they are accurate.
 			</div>
 		</div>
-		<div id="shade2" onclick='killPopup("popupTest", "shade2")'></div>
+		<div id="shade2" onclick='window.location.href="members.php"'></div>
 <?php
 	}
 ?>
-
-
-
-
-
 
 
 
@@ -69,10 +62,10 @@
 		<div style="margin: 20px 0px; position: relative; height: 326px; width: 1px; background: #cccccc; float: left;" ></div>
 		
 		<div id="my_service_hours" style="margin: 20px; position: relative; height: 326px; width: 410px; float: left;">
-			<h2>My hours:</h2>
+			<h2 style="margin-left: 0px;">My hours:</h2>
 			<br>
 			<center>
-				<table class="APOTable" header="yes" width="380px">
+				<table class="APOTable" header="yes" width="410px">
 					<tr>
 					    <th width="250px">Event</th>
 					    <th width="50px">Date</th>
@@ -80,44 +73,45 @@
 					    <th width="40px"></th>
 					</tr>
 				</table>
-				<div class="scroll-pane" style="height: 246px;">
+				<div class="scroll-pane" id="my_hrs" style="height: 246px; width: 410px;">
 					<center>
-					<table class="APOTable" width="380px">
+					<table class="APOTable" width="410px">
 						<tr>
-							<td width="250px"><a href="#" style="padding: 8px;">event_name</a></td><td width="50px">date1</td><td width="40px">hours1</td><td width="40px"><a href="#">Edit</a></td>
+							<td width="250px"><a href="#">event_name</a></td><td width="50px">date1</td><td width="40px">hours1</td><td width="40px"><a href="#">Edit</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" style="padding: 8px;">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
+							<td><a href="#">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" style="padding: 8px;">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
+							<td><a href="#">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" style="padding: 8px;">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
+							<td><a href="#">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" style="padding: 8px;">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
+							<td><a href="#">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" style="padding: 8px;">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
+							<td><a href="#">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" style="padding: 8px;">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
+							<td><a href="#">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" style="padding: 8px;">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
+							<td><a href="#">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" style="padding: 8px;">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
+							<td><a href="#">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" style="padding: 8px;">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
+							<td><a href="#">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
 						</tr>
 						<tr>
-							<td><a href="#" style="padding: 8px;">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
+							<td><a href="#">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
 						</tr>
 					</table>
 					<center>
+				</div>
 				</center>
 			</div>
 		</div>
@@ -125,15 +119,12 @@
 </div>
 
 <script type="text/javascript">
-	$('.scroll-pane').perfectScrollbar();
+	$('.scroll-pane#my_hrs').perfectScrollbar();
 	$(function(){
 		$('#datepicker').datepicker({
 			inline: true,
 			showOtherMonths: true,
 			dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
 		});
-	});
-	$(function () {
-      $('.default').dropkick();
 	});
 </script>
