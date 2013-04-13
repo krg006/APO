@@ -1,3 +1,12 @@
+<style>
+	body {
+		background-color: #fbfbfb;
+		background-image: url(../images/bg-top_loggedin.png);
+		background-position: top;
+		background-repeat: repeat-x;
+	}
+</style>
+
 <div id="header" align="center" style="top: 0px; width:720px; margin: 0px auto; clear:both;">
         <a href="../pages/index.php"><img src="../images/header.png"></a>
         <div id="navlist" align="right">

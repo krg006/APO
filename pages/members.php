@@ -18,8 +18,8 @@
 			if (logged_in()) {
 				include '../includes/dashboard/dashboard.php';
 			} else {
-				include '../includes/login.php';
-				include '../includes/register.php';
+				include '../includes/login_form.php';
+				include '../includes/registration_form.php';
 			}
 		?>
 	</div>

@@ -8,17 +8,6 @@
 	<?php
 		if (logged_in()) {
 			include '../includes/header_logged_in.php';
-	?>
-		<style>
-			body {
-				background-color: #fbfbfb;
-				background-image: url(../images/bg-top_loggedin.png);
-				background-position: top;
-				background-repeat: repeat-x;
-			}
-		</style>
-	<?php
-	
 		} else {
 			include '../includes/header.php';
 		}

@@ -117,7 +117,7 @@
 					</center>
 				</div>
 			</center>
-			<button class="APOButton" buttonColor="gray" onclick='showPopup("create_event", "shade2")' style="width: 124px; margin: 20px 0px; float: right;">Add event</button>
+			<button class="APOButton" buttonColor="blue" onclick='showPopup("create_event", "shade2")' style="width: 124px; margin: 20px 0px; float: right;">Add event</button>
 		</div>
 	</div>
 </div>

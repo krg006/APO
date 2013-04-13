@@ -21,7 +21,6 @@ h1 {
 	font-weight: normal;
 	color: #1e59ae;
 	font-size: 32px;
-	margin: 5px;
 	display: inline;
 	vertical-align: middle;
 	width: auto;
@@ -31,7 +30,6 @@ h2 {
 	font-weight: normal;
 	color: #1e59ae;
 	font-size: 16px;
-	margin: 2px;
 	display: inline;
 	vertical-align: middle;
 	width: auto;
@@ -41,7 +39,6 @@ h3 {
 	font-weight: normal;
 	color: #1e59ae;
 	font-size: 15px;
-	margin: 2px;
 	display: inline;
 	vertical-align: middle;
 	width: auto;

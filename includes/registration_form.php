@@ -73,7 +73,7 @@
 		$('#register_submit').click(function() {
 			$.ajax({
 				type : 'POST',
-				url : '../logic/registration.php',
+				url : '../logic/register.php',
 				dataType : 'json',
 				data : {
 					first_name : $('#first_name').val(),
