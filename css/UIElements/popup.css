@@ -38,6 +38,11 @@
 	background: #1e59ae;
 }
 
+[barColor="gray"].popupBox > .boxheader {
+	background: #222222;
+	border-bottom: 2px solid rgba(255,255,255,0.125);
+}
+
 .popupBox > .boxheader > .x {
 	display: inline;
 	float: right;
@@ -73,95 +78,6 @@
 
 #shade {
 	 display: none; 
-	 position:fixed; 
-	 left:0; 
-	 right:0; 
-	 top:0; 
-	 bottom:0; 
-	 background-color: rgba(0,0,0,0);"
-}
-
-
-/* Code for a popup box that does not require a .php?var=val construction.
- * Appears via javascript acting on the display: value; css command.
- * TODO: make all popups function like this.
- */
-
-.popupBox2 {
-	display: block;
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	padding-bottom: 12px;
-	background-color: #efefef;
-	border: 1px solid #aaaaaa;
-	z-index: 2000;
-	-moz-box-shadow: 0 0 5px #888888;
-	-webkit-box-shadow: 0 0 5px #888888;
-	box-shadow: 0 0 5px #888888;
-}
-
-.popupBox2 > .boxheader {
-	background: #fab41d;
-	padding-left: 12px;
-	color: #fbfbfb;
-	font-size: 18px;
-	text-transform: uppercase;
-	font-family: thin_font;
-	text-align: left;
-	height: 34px;
-}
-
-.popupBox2 > .boxheader > .title {
-	display: inline;
-	float: left;
-	padding: 6px;
-	cursor: move;
-}
-
-[barColor="gold"].popupBox2 > .boxheader {
-	background: #fab41d;
-}
-
-[barColor="blue"].popupBox2 > .boxheader {
-	background: #1e59ae;
-}
-
-.popupBox2 > .boxheader > .x {
-	display: inline;
-	float: right;
-	cursor: hand;
-}
-
-.popupBox2 > .boxheader > .x img {
-	opacity: 0.50;
-}
-
-.popupBox2 > .boxheader > .x:hover img {
-	opacity: 1.00;
-	background: rgba(255,255,255,0.125);
-}
-
-.popupBox2 > .boxbody {
-	clear: both;
-	padding: 10px;
-	color: #000000;
-	font-size: 14px;
-	font-family: thin_font;
-	text-align: left;
-}
-
-.popupBox2 > .boxfooter {
-	padding: 10px;
-	color: #333333;
-	font-size: 12px;
-	text-align: right;
-	font-family: thin_font;
-	clear: both;
-}
-
-#shade2 {
-	 display: block; 
 	 position:fixed; 
 	 left:0; 
 	 right:0; 

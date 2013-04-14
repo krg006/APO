@@ -29,12 +29,30 @@ h2 {
 	font-family: thin_font;
 	font-weight: normal;
 	color: #1e59ae;
-	font-size: 16px;
+	font-size: 24px;
 	display: inline;
 	vertical-align: middle;
 	width: auto;
 }
 h3 {
+	font-family: thin_font;
+	font-weight: normal;
+	color: #1e59ae;
+	font-size: 20px;
+	display: inline;
+	vertical-align: middle;
+	width: auto;
+}
+h4 {
+	font-family: thin_font;
+	font-weight: normal;
+	color: #1e59ae;
+	font-size: 16px;
+	display: inline;
+	vertical-align: middle;
+	width: auto;
+}
+h5 {
 	font-family: thin_font;
 	font-weight: normal;
 	color: #1e59ae;
@@ -141,3 +159,5 @@ a.navlist {
     bottom:10%;
     border-left:1px solid #c8c8c8;
 }
+
+

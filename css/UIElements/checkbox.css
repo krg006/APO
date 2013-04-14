@@ -1,0 +1,23 @@
+input[type=checkbox].APOCheck {
+	display: none;
+}
+
+input[type=checkbox].APOCheck + label.APOCheck {
+	padding-left: 20px;
+	height: 15px;
+	display: inline-block;
+	line-height: 15px;
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	font-size: 15px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+input[type=checkbox].APOCheck:checked + label.APOCheck {
+	background-position: 0 -15px;
+}
+
+label.APOCheck {
+	background-image: url(../../images/check.png);
+}

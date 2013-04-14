@@ -1,5 +1,5 @@
 <div id="body" align="center" style="margin-top: 50px">
-	<h2>Members of Alpha Phi Omega - Iota Kappa Chapter can log in below:</h2>
+	<h3>Members of Alpha Phi Omega - Iota Kappa Chapter can log in below:</h3>
 	<div class="APOShadowbox" align="center" style="width: 336px;">
 		<form action="" method="post">
 			<center>

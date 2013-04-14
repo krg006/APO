@@ -24,7 +24,7 @@
 	
 	<div id="body" align="center">
 		<h1><a href="http://www.apo.org" style="text-decoration: none; color: inherit;">Alpha Phi Omega</a></h1><br>
-		<h2 style="margin: 0px;"><a href="http://www.bucknell.edu" style="text-decoration: none; color: inherit;">Bucknell University</a></h2>
+		<h3 style="margin: 0px;"><a href="http://www.bucknell.edu" style="text-decoration: none; color: inherit;">Bucknell University</a></h3>
 
 		<div id="slideshow">
 		   <div>
@@ -44,12 +44,12 @@
 		<div id="textlayout">
 			<div id="whoarewe" align="center">
 					<h1>Who are we?</h1><br>
-					<h2>Iota Kappa Chapter</h2>
+					<h4>Iota Kappa Chapter</h4>
 					<p>Under the guiding principles of leadership, friendship, and service, Alpha Phi Omega provides service to the community by donating time and effort to various organizations and causes.</p>
 			</div>
 			<div id="upcomingevents">
 					<h1>Upcoming events</h1><br>
-					<h2> </h2>
+					<h4> </h4>
 					<p>There are no upcoming events for Alpha Phi Omega as of yet. Please check back with us in the Fall Semester.</p>
 			</div>
 		</div>
