@@ -1,4 +1,4 @@
-<div class="popupBox" id="create_serviceevent_popup" barColor="gray" style="width: 696px; margin-left: -348px; height: 440px; margin-top: -220px;">
+<div class="popupBox" id="create_serviceevent_popup" barColor="gold" style="width: 696px; margin-left: -348px; height: 440px; margin-top: -220px;">
 	<div class="boxheader">
 		<div class="title">
 			Create Service Event
@@ -13,14 +13,14 @@
 				<div style="float: left;">
 					<h3>Event information:</h3><br><br>
 					Event name:<br>
-					<input class="APOInput" style="width: 264px;" align="left" type="text" placeholder="Blood drive" name="event_name" />
+					<input class="APOInput" id="event_name" style="width: 264px;" align="left" type="text" placeholder="Blood drive" />
 					<div style="margin-top: 24px;">
 						<div style="float: left">
 							<h4>Start:</h4><br>
 							<br>Date: <br>
-							<input style="width: 108px;" class="APOInput" type="text" id="datepicker" readonly="true" placeholder="12/15/2013" name="event_start_date" />
+							<input style="width: 108px;" id="event_start_date" class="APOInput" type="text" readonly="true" placeholder="12/15/2013" id="event_start_date" />
 							<br>Time: <br>
-							<input style="width: 108px; margin-bottom: 5px;" class="APOInput" type="time" placeholder="1" name="event_start_hour" />
+							<input style="width: 108px; margin-bottom: 5px;" class="APOInput" id="event_start_time" type="time" />
 							<input id="checkbox_all_day" class="APOCheck" type="checkbox" />
 							<label for="checkbox_all_day" class="APOCheck">All Day</label><br>
 						</div>
@@ -30,9 +30,10 @@
 						<div style="float: left;">
 							<h4>End:</h4><br>
 							<br>Date: <br>
-							<input style="width: 108px;" class="APOInput" type="text" id="datepicker" readonly="true" placeholder="12/15/2013" name="event_start_date" />
+							<input style="width: 108px;" id="event_end_date" class="APOInput" type="text" readonly="true" placeholder="12/15/2013" id="event_start_date" />
 							<br>Time: <br>
-							<input style="width: 108px;" class="APOInput" type="time" placeholder="1" name="event_start_hour" /><br>
+							<input style="width: 108px; margin-bottom: 5px;" class="APOInput" id="event_end_time" type="time" />
+							
 						</div>
 					</div>
 				</div>
@@ -41,10 +42,10 @@
 				
 				<div style="float: left;">
 					<h3>Event description:</h3><br><br>
-					<textarea wrap="off" style="width: 265px; height: 259px;" placeholder="Enter a description about the event."></textarea>
+					<textarea id="event_description" wrap="off" style="width: 265px; height: 259px;" placeholder="Enter a description about the event."></textarea>
 				</div>
 			</div>
-			<button class="APOButton" id="add_serviceevent_submit" buttonColor="blue" type="button" style="float: right; margin: 20px 40px;">Submit</button>
+			<button class="APOButton" id="create_serviceevent_submit" buttonColor="blue" type="button" style="float: right; margin: 20px 40px;">Submit</button>
 		</form>
 	</div>
 	<div class="boxfooter" style="margin: 29px;">
@@ -140,13 +141,41 @@
 	</div>
 </div>
 
-
+<script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="../js/popups.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		
 		$('#create_serviceevent').click(function() {
 			showPopup("create_serviceevent_popup", "shade");
-		})
+		});
+		
+		$('#create_serviceevent_submit').click(function() {
+			//alert('click');
+			$.ajax({
+	        	type : 'POST',
+				url : '../../logic/create_event.php',
+				dataType : 'json',
+				data : {
+					//event_name : 'test' //$('#event_name').val(),
+					/*
+					event_start_date : 'test', //$('#event_start_date').val(),
+					event_start_time : 'test', //$('#event_start_time').val(),
+					event_all_day : 'test', //$('#event_all_day').val(),
+					event_end_date : 'test',// $('#event_end_date').val(),
+					event_end_time : 'test', //$('#event_end_time').val(),
+					event_description : 'test' //$('#event_description').val()
+					*/
+				},
+				success : function(data) {
+					alert(data.eventName);
+					//alert('name: ' + data.eventName + ' start date: ' + date.eventStartDate + ' start time: ' + date.eventStartTime + ' all day? ' + date.eventAllDay + ' end date: ' + date.eventEndDate + ' end time: ' + date.eventEndTime + ' description' + date.eventDescription);
+	      		},
+	      		error : function(XMLHttpRequest, textStatus, errorThrown) {
+					alert(errorThrown);
+				}
+		     });
+		});
 	});
 	
 	$('.scroll-pane#upcoming_events').perfectScrollbar();

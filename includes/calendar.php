@@ -37,7 +37,7 @@
 				right: 'month,agendaWeek'
 			},
 			
-			events: "../logic/calendar_events.php?opt=get_all",
+			events: "../logic/get_calendar_events.php?opt=get_all",
 			
 			eventClick: function(event) {
 				$.ajax({
