@@ -28,12 +28,22 @@ input.APOInput:focus {
 	box-shadow: none;
 }
 
+input.APOInput:disabled {
+	background: rgba(255,255,255,0.50);
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+	border: none;
+}
+
 textarea {
 	outline: none;
 	border: 1px solid #c4c3be;
 	background: #ffffff;
 	overflow: auto;
 	resize: none;
+	font-family: Helvetica;
+	font-size: 13px;
 }
 
 textarea:hover {

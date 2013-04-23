@@ -1,5 +1,4 @@
 <?php
-	
 	function register_user($registration_data) {
 		array_walk($registration_data, 'array_sanitize');
 		$registration_data['password'] = md5($registration_data['password']);

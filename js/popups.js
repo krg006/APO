@@ -1,25 +1,23 @@
 $(document).ready(function() {
 	$('.popupBox').draggable({
-		containment: 'document'
-	});
-	
-	$('.popupBox2').draggable({
-		containment: 'document'
+		containment: 'document',
+		handle: ".boxheader"
 	});
 });
 
 function showPopup(popupID, shadeID) {
-	$('#' + popupID).show();
+	$('#' + popupID).fadeIn(200);
 	$('#' + shadeID).show();
 }
 		
 function killPopup(popupID, shadeID) {
-	$('#' + popupID).hide();
+	$('#' + popupID).fadeOut(200);
 	$('#' + shadeID).hide();
-	$('#' + popupID + ' #form_register input').val('');
+	$('#' + popupID + ' input').val('');
 }
 
 function killAllPopups(shadeID) {
-	$('.popupBox').hide();
+	$('.popupBox').fadeOut(200);
 	$('#' + shadeID).hide();
+	$('.popupBox input').val('');
 }

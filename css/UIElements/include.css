@@ -93,6 +93,11 @@ span.smallerror {
 	color: red;
 	display: none;
 }
+span.hint {
+	font-family: "thin_font";
+	font-size: 12px;
+	color: #555555;
+}
 span.nice {
 	font-family: "thin_font";
 	font-size: 13px;
@@ -104,6 +109,21 @@ span.nice a {
 span.nice a:hover {
 	color: #1e59ae;
 	text-decoration: underline;
+}
+span.nice_big {
+	display: inline-block;
+	color: #fbfbfb;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-family: thin_font;
+	padding: 10px;
+}
+span[isclickable="false"].nice_big {
+	text-transform: none;
+}
+span[isclickable="true"].nice_big:hover {
+	background: rgba(0,0,0,0.125);
+	cursor: pointer;
 }
 br {
    display: block;
@@ -158,6 +178,15 @@ a.navlist {
     top:10%;
     bottom:10%;
     border-left:1px solid #c8c8c8;
+}
+
+.notif_bar {
+	position: relative;
+	background: #fab41d;
+	width: auto;
+	height: 34px;
+	margin: 20px -8px;
+	border-bottom: 2px solid rgba(0,0,0,0.125);
 }
 
 
