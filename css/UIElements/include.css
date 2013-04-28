@@ -25,6 +25,13 @@ h1 {
 	vertical-align: middle;
 	width: auto;
 }
+h1.h1Ellipsis {
+	white-space: nowrap;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0px;
+}
 h2 {
 	font-family: thin_font;
 	font-weight: normal;

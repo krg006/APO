@@ -9,7 +9,7 @@
 	</div>
 	<div class="boxbody">
 		<center>
-			<h3>Please complete the fields below. All inputs are required.</h3><br>
+			<h4>Please complete the fields below. All inputs are required.</h4><br>
 			<span class="error" id="e_register_blank">You did not fill out every field.</span>
 			<span class="error" id="e_register_match">Your passwords do not match.</span>
 			<span class="error" id="e_register_improper_email">Please enter your <i>@bucknell.edu</i> email address.</span>
@@ -48,7 +48,7 @@
 	</div>
 </div>
 
-<div class="popupBox" id="registration_confirmation" style="width: 436px; margin-left: -218px; height: 130px; margin-top: -65px;">
+<div class="popupBox" id="registration_confirmation" style="width: 436px; margin-left: -218px; height: 150px; margin-top: -75px;">
 	<div class="boxheader">
 		<div class="title">
 			Registration
@@ -57,12 +57,12 @@
 			<img src="../images/x.png" />
 		</div>
 	</div>
-	<div class="boxbody">
+	<div class="boxbody" style="padding: 20px;">
 		Registration success!<br>
 		You will be notified via email when your account has been activated.
 	</div>
 	<div class="boxfooter">
-		<button class="APOButton" id="dialog_close" buttonColor="gray" type="button" onclick='killPopup("registration_confirmation", "shade")'>Ok</button>
+		<button class="APOButton" id="dialog_close" buttonColor="gray" style="float: right; margin: 0px; 35px" type="button" onclick='killPopup("registration_confirmation", "shade")'>Ok</button>
 	</div>
 </div>
 <div id="shade" onclick='killAllPopups("shade")'></div>

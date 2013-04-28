@@ -14,7 +14,9 @@
 		</div>
 	</div>
 	<div class="boxbody" style="padding: 20px;">
-		<h1 id="event_title"></h1><br>
+		<a href="#" id="event_title_wrapper" title=" " style="text-decoration: none; cursor: default;">
+			<h1 class="h1Ellipsis" style="max-width: 380px;" id="event_title"></h1>
+		</a><br>
 		<table style="margin: 12px;" cellspacing="15px">
 			<tr valign="baseline">
 				<td width="70px"><h4>Where: </h4></td><td width="300px"><h4 id="event_where"></h4></td>
@@ -43,10 +45,23 @@
 				</td>
 			</tr>
 		</table>
+	</div>
+</div>
 
+<div class="popupBox" id="event_info_edit_error_popup" style="width: 436px; margin-left: -218px; height: 150px; margin-top: -75px;">
+	<div class="boxheader">
+		<div class="title">
+			Cannot edit
+		</div>
+		<div class="x" onclick='killPopup("event_info_edit_error_popup", "shade")'>
+			<img src="../images/x.png" />
+		</div>
+	</div>
+	<div class="boxbody" style="padding: 20px;">
+		<span id="event_info_edit_error_message"></span>
 	</div>
 	<div class="boxfooter">
-
+		<button class="APOButton" id="event_info_edit_er_popup_close" buttonColor="gray" style="float: right; margin: 0px; 35px" type="button" onclick='killPopup("event_info_edit_error_popup", "shade")'>Ok</button>
 	</div>
 </div>
 <div id="shade" onclick='killAllPopups("shade")'></div>
@@ -55,7 +70,18 @@
 
 <script>
 
+	var loggedIn;
+	var eventCreator;
+
+	<?php if(logged_in()) { ?>
+			loggedIn = true;
+	<?php } else { ?>
+			loggedIn = false;
+	<?php } ?>
+
 	$(document).ready(function() {
+	
+		$('#event_title_wrapper').tipsy({gravity: 'n', title: 'title'});
 	
 		$('#calendar').fullCalendar({
 			header: {
@@ -75,7 +101,11 @@
 						event_id : event.id
 					},
 					success : function(data) {
+						var eventName = data.eventName;
+						
 						$('#event_info_popup #event_title').text(data.eventName);
+						$('#event_info_popup #event_title_wrapper').prop('title', data.eventName);
+						
 						$('#event_info_popup #event_where').text(data.eventLocation);
 						
 						if (data.eventSameDay) {
@@ -96,6 +126,8 @@
 						$('#event_info_popup #event_type').text(data.eventType + " Event");
 						$('#event_info_popup .boxheader').css("background", data.eventColor);
 						$('#event_info_popup #event_creator').text("Posted by " + data.eventCreator);
+						eventCreator = data.eventCreator;
+						
 						$('#event_info_popup #event_description').text(data.eventDescription);
 						
 		        		showPopup("event_info_popup", "shade");
@@ -121,7 +153,23 @@
 	$('#event_creator_sprite').click(function() {
 		slideToggle = !slideToggle;
 	});
-
+	
+	
+	
+	$('#event_edit_submit').click(function() {
+		if (loggedIn) {
+			if (eventCreator == '<?php echo $_SESSION['username'] ?>') {
+				alert('edit goes here');
+			} else {
+				$('#event_info_edit_error_message').html('You did not create this event, and do not have permission to edit it.');
+				showPopup("event_info_edit_error_popup", "shade");
+			}
+		} else {
+			$('#event_info_edit_error_message').html('You are not logged in. <br> You must <a href="../pages/members.php">log in</a> before you can edit this event.');
+			showPopup("event_info_edit_error_popup", "shade");
+		}
+	});
+	
 </script>
 <div id='calendar' style="margin-top: 24px;"></div>
 

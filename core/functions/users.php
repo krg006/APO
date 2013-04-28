@@ -1,4 +1,5 @@
 <?php
+
 	function register_user($registration_data) {
 		array_walk($registration_data, 'array_sanitize');
 		$registration_data['password'] = md5($registration_data['password']);
@@ -51,6 +52,23 @@
 		$username = sanitize($username);
 		$query = mysql_query("SELECT `last_name` FROM `users` WHERE `username` = '$username'");
 		return mysql_result($query, 0, 'last_name');
+	}
+	
+	function get_first_position($username) {
+		$username = sanitize($username);
+		$query = mysql_query("SELECT `position_1` FROM `users` WHERE `username` = '$username'");
+		echo mysql_result($query, 0, 'position_1');
+	}
+	
+	function get_second_position($username) {
+		$username = sanitize($username);
+		$query = mysql_query("SELECT `position_2` FROM `users` WHERE `username` = '$username'");
+		$pos2 = mysql_result($query, 0, 'position_2');
+		if (!empty($pos2)) {
+			echo '& '.$pos2;
+		} else {
+			echo '';
+		}
 	}
 
 ?>

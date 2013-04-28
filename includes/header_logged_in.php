@@ -30,6 +30,7 @@
 				url : '../pages/logout.php',
 				success : function(data) {
 					$('.notif_bar').fadeOut(250);
+					loggedIn = false;
 	      		},
 	      		error : function(XMLHttpRequest, textStatus, errorThrown) {
 					alert(errorThrown);

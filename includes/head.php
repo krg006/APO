@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/UIElements/perfect-scrollbar.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="../css/UIElements/datepicker.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="../css/UIElements/checkbox.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="../css/UIElements/tipsy.css" media="screen" />
 	
 	<link rel="stylesheet" type="text/css" href="../css/index.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="../css/blog.css" media="screen" />
@@ -26,6 +27,7 @@
 	<script type="text/javascript" src="../js/jquery.mousewheel.js"></script>
 	<script type="text/javascript" src="../js/perfect-scrollbar.js"></script>
 	<script type="text/javascript" src="../js/popups.js"></script>
+	<script type="text/javascript" src="../js/jquery.tipsy.js"></script>
 	
 	<title>Alpha Phi Omega | Iota Kappa Chapter</title>
 </head>

@@ -1,7 +1,7 @@
 <div id="body" align="center" style="margin-top: 50px">
 	<h3>Members of Alpha Phi Omega - Iota Kappa Chapter can log in below:</h3>
 	<div class="APOShadowbox" align="center" style="width: 336px;">
-		<form action="" method="post">
+		<form>
 			<center>
 				<span class="error" id="e_blank">You must enter a username and a password.</span>
 				<span class="error" id="e_not_activated">

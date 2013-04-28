@@ -48,7 +48,7 @@
 			<center>
 				<span class="nice" style="margin-top: 75px; display: block; font-size: 18px;"><span style="font-size: 75px;">42</span>/70</span>
 				<div style="position: absolute; bottom: 0px; width: 130px;">
-					<button class="APOButton" id="add_hours" buttonColor="blue" onclick='showPopup("add_hours_popup", "shade")' style="width: 124px; margin-bottom: 10px;">Add hours</button>
+					<button class="APOButton" id="add_hours" buttonColor="blue" onclick='showPopup("add_hours_popup", "shade")' style="width: 124px; margin-bottom: 0px;">Add hours</button>
 				</div>
 			</center>
 		</div>
