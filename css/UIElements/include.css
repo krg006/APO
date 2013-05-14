@@ -132,11 +132,6 @@ span[isclickable="true"].nice_big:hover {
 	background: rgba(0,0,0,0.125);
 	cursor: pointer;
 }
-br {
-   display: block;
-   margin-top: 10px 0;
-   line-height: 20px;
-}
 
 #header {
 	top: 0px; 

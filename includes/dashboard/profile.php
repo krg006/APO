@@ -6,8 +6,7 @@
 	}
 </style>
 
-
-<div class="popupBox" id="create_event_popup" barColor="gold" style="width: 696px; margin-left: -348px; height: 510px; margin-top: -255px;">
+<div class="popupBox" id="create_event_popup" barColor="gold" style="width: 696px; margin-left: -348px; height: 516px; margin-top: -258px;">
 	<div class="boxheader">
 		<div class="title">
 			Create Event
@@ -18,12 +17,12 @@
 	</div>
 	<div class="boxbody">
 		<center>
-			<span class="error" id="create_event_error"></span>
+			<span class="error" id="enter_event_error"></span>
 		</center>
 		<form style="margin: 29px auto;">
-			<div style="position: relative; margin: 0px auto; width: 595px; height: 362px;">
+			<div style="position: relative; margin: 0px auto; width: 595px; height: 380px;">
 				<div style="float: left;">
-					<h3 style="margin-bottom: 20px;">Event information:</h3><br>
+					<h3 style="margin-bottom: 20px;">Event information:</h3><br><br>
 					Event name:<br>
 					<input class="APOInput" id="event_name" style="width: 264px; margin-top: 5px; margin-bottom: 15px;" align="left" type="text" placeholder="ex. Blood drive" />
 					Event location:<br>
@@ -52,11 +51,25 @@
 					</div>
 				</div>
 				
-				<div style="margin: 0px 32px;  height: 362px; width: 1px; background: #cccccc; float: left;" ></div>
+				<div style="margin: 0px 32px;  height: 378px; width: 1px; background: #cccccc; float: left;" ></div>
 				
 				<div style="float: left;">
-					<h3 style="margin-bottom: 20px;">Event description:</h3><br>
-					<textarea id="event_description" wrap="on" style="width: 265px; height: 317px; margin-top: 20px;" placeholder="Enter a description about the event."></textarea>
+					<h3 style="margin-bottom: 20px;">Event description:</h3><br><br>
+					Event type:<br>
+					<dl id="event_type" class="dropdown" style="width: 265px;">
+				        <dt><a href="#" style="width: 265px;"><span style="margin: 4 0 0 4;">Select type</span></a></dt>
+				        <dd>
+				            <ul>
+				            	<li><a class="category" href="#">Service</a></li>
+				                <li><a class="service-type" href="#">to the Community<span class="value">service-c</span></a></li>
+				                <li><a class="service-type" href="#">to the World<span class="value">service-w</span></a></li>
+				                <li><a href="#">Fellowship<span class="value">fellowship</span></a></li>
+				                <li><a href="#">Other<span class="value">other</span></a></li>
+				            </ul>
+				        </dd>
+				    </dl>
+    				Event summary:<br>
+					<textarea id="event_description" wrap="on" style="width: 265px; height: 245px; margin-top: 5px;" placeholder="Enter a description about the event."></textarea>
 				</div>
 			</div>
 			<span class="hint" style="margin: 30px 34px; float: left;">Time should be entered as <i>hh:mm</i>, like <i>01:25PM</i>.</span>
@@ -66,6 +79,7 @@
 	<div class="boxfooter" style="margin: 29px;">
 	</div>
 </div>
+
 <div id="shade" onclick='killAllPopups("shade")'></div>
 
 
@@ -81,7 +95,7 @@
 	    	<div class="hoverpic">
 	    		<div>
 	    			<a href="#" style="text-decoration: none;">
-	    				<img src="../images/profile_gold_on_blue.png" />
+	    				<img src="../images/profile_gold_light.png" />
 		    			<div class="hoveroverlay">
 		    				Change profile picture
 		    			</div>
@@ -112,6 +126,34 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		
+		var eventType = "default";
+    	
+        $(".dropdown dt a").click(function() {
+            $(".dropdown dd ul").toggle();
+        });
+                    
+        $(".dropdown dd ul li a").click(function() {
+        	var category = $(this).attr('class');
+        	
+        	if (category != 'category') {
+        		var text = $(this).html();
+        		if (category == 'service-type') {
+        			var text = "Service " + $(this).html();
+        		}
+	            $(".dropdown dt a span").html(text);
+	            $(".dropdown dd ul").hide();
+	            
+	            eventType = $("#event_type").find("dt a span.value").html();
+        	}
+        });
+                    
+        $(document).bind('click', function(e) {
+            var $clicked = $(e.target);
+            if (!$clicked.parents().hasClass("dropdown"))
+                $(".dropdown dd ul").hide();
+        });
+		
+		
 		$('#create_event').click(function() {
 			showPopup("create_event_popup", "shade");
 		});
@@ -126,7 +168,6 @@
 		
 		$('#create_event_submit').click(function() {
 			$('#enter_event_error').hide();
-			
 			$.ajax({
 	        	type : 'POST',
 				url : '../logic/create_event.php',
@@ -134,7 +175,7 @@
 				data : {
 					event_name : $('#event_name').val(),
 					event_location : $('#event_location').val(),
-					event_type : 'service',
+					event_type : eventType,
 					event_start_date : $('#event_start_date').val(),
 					event_start_time : $('#event_start_time').val(),
 					event_all_day : ($('#checkbox_all_day').is(":checked")) ? "checked" : "unchecked",
@@ -148,6 +189,7 @@
 					} else {
 						$('#enter_event_error').text(data);
 						$('#enter_event_error').fadeIn(250);
+						$('#create_event_popup').css("height", "532");
 					}
 	      		},
 	      		error : function(XMLHttpRequest, textStatus, errorThrown) {

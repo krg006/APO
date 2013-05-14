@@ -1,0 +1,78 @@
+.dropdown {
+	margin: 5px 0px 15px 0px;
+	height: 36px;
+}
+.dropdown dd, .dropdown dt, .dropdown ul {
+	margin: 0px;
+	padding: 0px;
+}
+.dropdown dd {
+	position: relative;
+}
+.dropdown a, .dropdown a:visited {
+	font-family: Arial;
+	color: #777777;
+	text-decoration: none;
+	outline: none;
+}
+.dropdown a:hover {
+	color: #5d4617;
+}
+.dropdown dt a:hover, .dropdown dt a:focus {
+	border: 1px solid #c4c3be;
+	color: #005791;
+	-moz-box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0px 1px 2px 1px rgba(0, 0, 0, 0.1);
+}
+.dropdown dt a {
+	background: #ffffff url('../../images/dropdown_arrow.png') no-repeat scroll right center;
+	display: block;
+	width: 150px;
+	height: 36px;
+	border: 1px solid #c4c3be;
+}
+.dropdown dt a span {
+	cursor: pointer;
+	display: block;
+	padding: 5px;
+}
+.dropdown dd ul {
+	background: #ffffff none repeat scroll 0 0;
+	border: 1px solid #c4c3be;
+	color: #777777;
+	display: none;
+	left: 0px;
+	padding: 5px 0px;
+	position: absolute;
+	top: 2px;
+	width: auto;
+	min-width: 170px;
+	list-style: none;
+}
+.dropdown span.value {
+	display: none;
+}
+.dropdown dd ul li a {
+	padding: 5px;
+	display: block;
+}
+.dropdown dd ul li a:hover {
+	color: #777777;
+	background-color: #e5e5e5;
+}
+.dropdown dd ul li a.service-type {
+	margin-left: 12px;
+}
+.dropdown dd ul li a.category:hover {
+	color: #777777;
+	background-color: #ffffff;
+}
+.dropdown img.flag {
+	border: none;
+	vertical-align: middle;
+	margin-left: 10px;
+}
+.flagvisibility {
+	display: none;
+}

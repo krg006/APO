@@ -67,7 +67,6 @@
 </div>
 <div id="shade" onclick='killAllPopups("shade")'></div>
 
-<script type="text/javascript" src="../js/jquery-1.9.1.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 		$('#register_submit').click(function() {

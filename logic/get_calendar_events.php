@@ -3,9 +3,10 @@
 
 
 	$event_colors = array(
-		'service'		=> '#aa66cc',
-		'fellowship'	=> '#33b5e5',
-		'other'			=> '#ffbb33'
+		'service-c'		=> '#16a5d7',
+		'service-w'		=> '#b368d9',
+		'fellowship'	=> '#2163c2',
+		'other'			=> '#a8d324'
 	);
 
 
@@ -64,6 +65,8 @@
 		$end = $row['event_end'];
 		
 		$return = array(
+			'eventID'			=> $row['event_id'],
+			
 			'eventName'			=> stripslashes($row['event_name']),
 			
 			'eventLocation'		=> stripslashes($row['event_location']),
@@ -71,16 +74,20 @@
 			'eventStartYear'	=> substr($start, 0, 4),
 			'eventStartMonth'	=> $months[substr($start, 5, 2)],
 			'eventStartDay'		=> substr($start, 8, 2),
+			'eventStartDate'	=> substr($start, 5, 2).'/'.substr($start, 8, 2).'/'.substr($start, 0, 4),
 			'eventStartHour'	=> (intval(substr($start, 11, 2)) > 12) ? intval(substr($start, 11, 2)) - 12 : intval(substr($start, 11, 2)),
 			'eventStartMinute'	=> substr($start, 14, 2),
 			'eventStartAM'		=> (intval(substr($start, 11, 2)) > 12) ? "pm" : "am",
+			'eventStartTime'	=> ((intval(substr($start, 11, 2)) > 12) ? intval(substr($start, 11, 2)) - 12 : intval(substr($start, 11, 2))).':'.substr($start, 14, 2).' '.((intval(substr($start, 11, 2)) > 12) ? "pm" : "am"),
 			
 			'eventEndYear'		=> substr($end, 0, 4),
 			'eventEndMonth'		=> $months[substr($end, 5, 2)],
 			'eventEndDay'		=> substr($end, 8, 2),
+			'eventEndDate'		=> substr($end, 5, 2).'/'.substr($end, 8, 2).'/'.substr($end, 0, 4),
 			'eventEndHour'		=> (intval(substr($end, 11, 2)) > 12) ? intval(substr($end, 11, 2)) - 12 : intval(substr($end, 11, 2)),
 			'eventEndMinute'	=> substr($end, 14, 2),
 			'eventEndAM'		=> (intval(substr($end, 11, 2)) > 12) ? "pm" : "am",
+			'eventEndTime'		=> ((intval(substr($end, 11, 2)) > 12) ? intval(substr($end, 11, 2)) - 12 : intval(substr($end, 11, 2))).':'.substr($end, 14, 2).' '.((intval(substr($end, 11, 2)) > 12) ? "pm" : "am"),
 			
 			'eventSameDay' 		=> (substr($start, 0, 10) == substr($end, 0, 10)) ? true : false,
 			

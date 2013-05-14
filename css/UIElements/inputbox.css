@@ -1,7 +1,7 @@
 input.APOInput {
 	width: 336px;
-	height: 36px;
-	font-family: thin_font;
+	height: 38px;
+	font-family: Arial;
 	font-size: 14px;
 	display: block;
 	padding: 0 10px 0 10px;
@@ -39,11 +39,13 @@ input.APOInput:disabled {
 textarea {
 	outline: none;
 	border: 1px solid #c4c3be;
+	color: #777777;
 	background: #ffffff;
 	overflow: auto;
 	resize: none;
-	font-family: Helvetica;
+	font-family: Arial;
 	font-size: 13px;
+	padding: 5px;
 }
 
 textarea:hover {

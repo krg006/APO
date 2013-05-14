@@ -75,6 +75,11 @@
 			$end_time = $end['hour'].':'.$end['min'];
 		}
 	}
+
+	if ($type == "default") {
+		echo 'You didn\'t select a type for this event.';
+		die();
+	}
 	
 	if (empty($description)){
 		$description = "No description";
