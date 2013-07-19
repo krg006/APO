@@ -4,8 +4,11 @@
 	<link rel="icon" type="image/ico" href="../images/apoicon.gif">
 	<link rel="shortcut icon" href="../images/apoicon.ico">
 	
+	<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,100'>
+	
 	<link rel="stylesheet" type="text/css" href="../css/UIElements/include.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="../css/UIElements/button.css" media="screen" />
+	<link rel="stylesheet" type="text/css" href="../css/UIElements/colors.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="../css/UIElements/inputbox.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="../css/UIElements/dashboard.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="../css/UIElements/popup.css" media="screen" />
@@ -29,6 +32,7 @@
 	<script type="text/javascript" src="../js/perfect-scrollbar.js"></script>
 	<script type="text/javascript" src="../js/popups.js"></script>
 	<script type="text/javascript" src="../js/jquery.tipsy.js"></script>
+	<script type="text/javascript" src="../js/jquery.stickyPanel.js"></script>
 	
 	<title>Alpha Phi Omega | Iota Kappa Chapter</title>
 </head>

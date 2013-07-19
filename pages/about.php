@@ -12,9 +12,7 @@
 			include '../includes/header.php';
 		}
 	?>
-	<script>
-		$('#aboutLink').css("font-weight", "bold");
-	</script>
+	<script>$('#aboutLink').css("color", "1e59ae");</script>
 	
 	<div id="body" align="center">
 		<div id="aboutus" align="center">

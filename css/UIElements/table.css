@@ -1,52 +1,64 @@
-.APOTable {
-	font-family: thin_font;
-	font-size:11px;
-	color: #333333;
-	border: 1px solid #cccccc;
-	border-collapse: collapse;
-	table-layout: fixed;
-}
-
-[header="yes"].APOTable {
+.APOTableHeader {
+	background: #dedede; 
+	border: 1px solid #cccccc; 
 	margin-top: 20px;
-}
-
-.APOTable th {
-	background-color: #dedede;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #cccccc;
-	font-size: 14px;
-	font-weight: bold;
 	height: 40px;
-	padding: 0px;
 }
 
-.APOTable tr {
-	background-color: #f9f9f9;
+.APOTableLabel {
+	line-height: 40px; 
+	float:left; 
+	padding-left: 10px; 
+	font-weight: 400;
+	height: 40px;
+}
+
+.APOTableRow {
+	height: 40px; 
+	background: #f9f9f9;
+	border-bottom-color: #e5e5e5;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
 	font-size: 13px;
-	height: 35px;
 }
 
-.APOTable tr a {
-	text-decoration: none;
+.APOTableLabel > span {
+	white-space: nowrap;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0px;
 }
 
-.APOTable tr:hover a {
-	text-decoration: underline;
+.APOTableRow:hover {
+	background: #f6f6f6;
 }
 
-.APOTable tr:hover {
-	background-color: #f0f0f0;
+.APOTableRow:hover .APOTableRowButton {
+	display: inline;
 }
 
-.APOTable td {
-	padding: 8px 0px;
-	border: 1px solid #cccccc;
-	text-align: center;
+.APOTableRowButton {
+	float: right; 
+	margin: 2px;
+	width:0px; 
+	height:0px; 
+	padding: 17 12;
+	opacity: 0.3;
+	filter:alpha(opacity=30);
+	display:none;
 }
 
-.APOTable tr td:first-child {
-	text-align: left;
-	text-indent: 8px;
+.APOTableRowButton:hover {
+	opacity: 0.6;
+	filter:alpha(opacity=60);
+}
+
+.ButtonEdit {
+	margin-right: 7px;
+	background: url(../../images/edit.png);
+}
+
+.ButtonTrash {
+	background: url(../../images/trash.png);
 }

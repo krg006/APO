@@ -10,7 +10,7 @@
 
 #upcomingevents {
     width: 465px;
-    margin-left: 255px;
+    float: right;
     valign: baseline;
 }
 

@@ -82,15 +82,12 @@
 
 <div id="shade" onclick='killAllPopups("shade")'></div>
 
-
-
-
-<div class="APOPanel" color="gold" style="width: 230px; height: 400px; margin-right: 20px;">
+<div class="APOPanel" id="panel_profile" style="width: 230px; position: relative;">
 	<div class="panelheader">
 		<?php echo user_get_first_name($_SESSION['username']).' '.user_get_last_name($_SESSION['username']); ?>
 	</div>
 	<div class="panelbody">
-		<div style="padding-top: 10px; position: relative; height: 356px;">
+		<div style="position: relative; height: 356px;">
 	    	<center>
 	    	<div class="hoverpic">
 	    		<div>
@@ -153,7 +150,6 @@
                 $(".dropdown dd ul").hide();
         });
 		
-		
 		$('#create_event').click(function() {
 			showPopup("create_event_popup", "shade");
 		});
@@ -199,16 +195,10 @@
 		});
 	});
 	
-	$(function(){
-		$('#event_start_date').datepicker({
-			inline: true,
-			showOtherMonths: true,
-			dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-		});
-	});
+	
 	
 	$(function(){
-		$('#event_end_date').datepicker({
+		$('#event_start_date, #event_end_date').datepicker({
 			inline: true,
 			showOtherMonths: true,
 			dayNamesMin: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],

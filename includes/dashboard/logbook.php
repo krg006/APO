@@ -24,7 +24,7 @@
 						<input style="width: 108px;" class="APOInput" type="text" placeholder="1.5" name="num_hours" />
 					</div>
 				</li>
-				<button class="APOButton" id="add_hours_submit" buttonColor="blue" type="button" style="float:right; margin: 40px; margin-bottom: 0px;">Submit</button>
+				<button class="blue" id="add_hours_submit" type="button" style="float:right; margin: 40px; margin-bottom: 0px;">Submit</button>
 			</ul>
 		</form>
 	</div>
@@ -37,7 +37,7 @@
 
 
 
-<div class="APOPanel" color="blue" style="width: 620px; height: 400px; margin-left: 20px;">
+<div class="APOPanel" style="width: 620px;">
 	<div class="panelheader">
 		Logbook
 	</div>
@@ -48,17 +48,158 @@
 			<center>
 				<span class="nice" style="margin-top: 75px; display: block; font-size: 18px;"><span style="font-size: 75px;">42</span>/70</span>
 				<div style="position: absolute; bottom: 0px; width: 130px;">
-					<button class="APOButton" id="add_hours" buttonColor="blue" onclick='showPopup("add_hours_popup", "shade")' style="width: 124px; margin-bottom: 0px;">Add hours</button>
+					<button class="orange" id="add_hours" onclick='showPopup("add_hours_popup", "shade")' style="margin-bottom: 0px;">Add hours</button>
 				</div>
 			</center>
 		</div>
 		
-		<div style="margin: 20px 0px; position: relative; height: 326px; width: 1px; background: #cccccc; float: left;" ></div>
+		<div style="margin: 20px 0px; position: relative; height: 326px; width: 1px; background: #cccccc; float: left;"></div>
 		
 		<div id="my_service_hours" style="margin: 20px; position: relative; height: 326px; width: 410px; float: left;">
 			<h4 style="margin-left: 0px;">My hours:</h4>
 			<br>
-			<center>
+			
+			<div class="APOTableHeader" style="width: 410px;">
+				<div class="APOTableLabel" style="width: 280px;">Event</div>
+				<div class="APOTableLabel" style="width: 50px;">Date</div>
+				<div class="APOTableLabel" style="width: 50px;">Hours</div>
+				<br class="clear">
+			</div>
+			<div class="scroll-pane" id="my_hrs" style="height: 246px; width: 412px;">
+				<div id="scroll_wrapper" style="border: 1px solid #cccccc;">
+					<div class="APOTableRow" style="width: 410;">
+						<div class="APOTableLabel" style="width: 278;">
+							<span style="width: 210px">event_name stretch this out to be as long as possible blah blah blah</span>
+							<img class="APOTableRowButton ButtonEdit"/>
+							<img class="APOTableRowButton ButtonTrash"/>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>date</span>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>3</span>
+						</div>
+					</div>
+					
+					<div class="APOTableRow" style="width: 410;">
+						<div class="APOTableLabel" style="width: 278;">
+							<span style="width: 210px">event_name stretch this out to be as long as possible blah blah blah</span>
+							<img class="APOTableRowButton ButtonEdit"/>
+							<img class="APOTableRowButton ButtonTrash"/>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>date</span>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>3</span>
+						</div>
+					</div>
+					
+					<div class="APOTableRow" style="width: 410;">
+						<div class="APOTableLabel" style="width: 278;">
+							<span style="width: 210px">event_name stretch this out to be as long as possible blah blah blah</span>
+							<img class="APOTableRowButton ButtonEdit"/>
+							<img class="APOTableRowButton ButtonTrash"/>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>date</span>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>3</span>
+						</div>
+					</div>
+					
+					<div class="APOTableRow" style="width: 410;">
+						<div class="APOTableLabel" style="width: 278;">
+							<span style="width: 210px">event_name stretch this out to be as long as possible blah blah blah</span>
+							<img class="APOTableRowButton ButtonEdit"/>
+							<img class="APOTableRowButton ButtonTrash"/>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>date</span>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>3</span>
+						</div>
+					</div>
+					
+					<div class="APOTableRow" style="width: 410;">
+						<div class="APOTableLabel" style="width: 278;">
+							<span style="width: 210px">event_name stretch this out to be as long as possible blah blah blah</span>
+							<img class="APOTableRowButton ButtonEdit"/>
+							<img class="APOTableRowButton ButtonTrash"/>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>date</span>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>3</span>
+						</div>
+					</div>
+					
+					<div class="APOTableRow" style="width: 410;">
+						<div class="APOTableLabel" style="width: 278;">
+							<span style="width: 210px">event_name stretch this out to be as long as possible blah blah blah</span>
+							<img class="APOTableRowButton ButtonEdit"/>
+							<img class="APOTableRowButton ButtonTrash"/>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>date</span>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>3</span>
+						</div>
+					</div>
+					
+					<div class="APOTableRow" style="width: 410;">
+						<div class="APOTableLabel" style="width: 278;">
+							<span style="width: 210px">event_name stretch this out to be as long as possible blah blah blah</span>
+							<img class="APOTableRowButton ButtonEdit"/>
+							<img class="APOTableRowButton ButtonTrash"/>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>date</span>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>3</span>
+						</div>
+					</div>
+					
+					<div class="APOTableRow" style="width: 410;">
+						<div class="APOTableLabel" style="width: 278;">
+							<span style="width: 210px">event_name stretch this out to be as long as possible blah blah blah</span>
+							<img class="APOTableRowButton ButtonEdit"/>
+							<img class="APOTableRowButton ButtonTrash"/>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>date</span>
+						</div>
+						<div style="margin: 10px 0px;  height: 20px; width: 1px; background: #cccccc; float: left;"></div>
+						<div class="APOTableLabel" style="width: 50px;">
+							<span>3</span>
+						</div>
+					</div>
+					
+					
+				</div>
+			</div>
+			
+			<!--
 				<table class="APOTable" header="yes" width="410px">
 					<tr>
 					    <th width="250px">Event</th>
@@ -68,7 +209,6 @@
 					</tr>
 				</table>
 				<div class="scroll-pane" id="my_hrs" style="height: 246px; width: 410px;">
-					<center>
 					<table class="APOTable" width="410px">
 						<tr>
 							<td width="250px"><a href="#">event_name</a></td><td width="50px">date1</td><td width="40px">hours1</td><td width="40px"><a href="#">Edit</a></td>
@@ -104,11 +244,12 @@
 							<td><a href="#">event_name</a></td><td>date1</td><td>hours1</td><td><a href="#">Edit</a></td>
 						</tr>
 					</table>
-					<center>
 				</div>
-				</center>
-			</div>
+			-->
 		</div>
+		
+		<br class="clear">
+		
 	</div>
 </div>
 

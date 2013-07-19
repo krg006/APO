@@ -13,7 +13,7 @@
 		}
 	?>
 	<script>
-		$('#homeLink').css("font-weight", "bold");
+		$('#homeLink').css("color", "1e59ae");
 		
 		$(function() {
 			$("#slideshow > div:gt(0)").hide();
@@ -43,14 +43,14 @@
 
 		<div id="textlayout">
 			<div id="whoarewe" align="center">
-					<h1>Who are we?</h1><br>
-					<h4>Iota Kappa Chapter</h4>
-					<p>Under the guiding principles of leadership, friendship, and service, Alpha Phi Omega provides service to the community by donating time and effort to various organizations and causes.</p>
+				<h1>Who are we?</h1><br>
+				<h4>Iota Kappa Chapter</h4>
+				<p>Under the guiding principles of leadership, friendship, and service, Alpha Phi Omega provides service to the community by donating time and effort to various organizations and causes.</p>
 			</div>
 			<div id="upcomingevents">
-					<h1>Upcoming events</h1><br>
-					<h4> </h4>
-					<p>There are no upcoming events for Alpha Phi Omega as of yet. Please check back with us in the Fall Semester.</p>
+				<h1>Upcoming events</h1><br>
+				<h4> </h4>
+				<p>There are no upcoming events for Alpha Phi Omega as of yet. Please check back with us in the Fall Semester.</p>
 			</div>
 		</div>
 	</div>

@@ -16,13 +16,11 @@
 				</span>
 				<span class="error" id="e_incorrect_username_or_password">Incorrect username and/or password.</span>
 
-				<p><input class="APOInput" id="username" type="text" placeholder="Username" name="username"></p>
-				<p><input class="APOInput" id="password" type="password" placeholder="Password" name="password"></p>
+				<p><input id="username" type="text" placeholder="Username" name="username"></p>
+				<p><input id="password" type="password" placeholder="Password" name="password"></p>
 			</center>
-			<button class="APOButton" id="register" buttonColor="gray" style="float:left;" type="button" >
-				Register
-			</button>
-			<input class="APOButton" id="login" buttonColor="blue" type="submit" style="float:right;" value="Log in" />
+			<button class="gray" id="register" style="float:left;" type="button">Register</button>
+			<button class="blue" id="login" type="submit" style="float:right;">Log In</button>
 		</form>
 	</div>
 </div>

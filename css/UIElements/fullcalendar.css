@@ -63,7 +63,7 @@ html .fc, .fc table {
 	margin-bottom: 1em;
 	vertical-align: top;
 	text-transform: capitalize;
-	font-family: thin_font;
+	font-family: "Open Sans", sans-serif;
 }
 
 /* buttons edges butting together */
@@ -111,7 +111,7 @@ html .fc, .fc table {
 	border: 1px solid #ddd;
 	background: #f7f7f7;
 	color: #333333;
-	font-family: thin_font;
+	font-family: "Open Sans", sans-serif;
 }
 
 .fc-state-highlight {/* <td> today cell */ /* TODO: add .fc-today to <th> */
@@ -190,21 +190,14 @@ html .fc, .fc table {
  */
 
 .fc-state-default {
-	background : -webkit-linear-gradient(top, #f1f1f1 00%, #eaeaea 99%);
-	background : -moz-linear-gradient(top, #f1f1f1 00%, #eaeaea 99%);
-	background : -o-linear-gradient(top, #f1f1f1 00%, #eaeaea 99%);
-	background : -ms-linear-gradient(top, #f1f1f1 00%, #eaeaea 99%);
-	background : -linear-gradient(top, #f1f1f1 00%, #eaeaea 99%);
-	border: 1px solid #c3c3c3;
-	cursor: pointer;
-	display: inline-block;
-	margin: 0;
-	transition: all 0.2s;
-	padding 0 8px;
-	color: #333333;
-	font-size: 15px;
-	font-family: thin_font;
-	border-radius: 2px;
+	font-family: 			sans-serif;
+	font-weight: 			300;
+	text-align: 			center;
+	font-size: 				14px;
+	cursor: 				pointer;
+	background: 			#efefef;
+	border: 				1px solid #c3c3c3;
+	color: 					#444444;
 }
 
 .fc-state-hover, .fc-state-down, .fc-state-active, .fc-state-disabled {
@@ -213,21 +206,21 @@ html .fc, .fc table {
 }
 
 .fc-state-hover {
-	background : -webkit-linear-gradient(top, #f1f1f1 00%, #e5e5e5 99%);
-	background : -moz-linear-gradient(top, #f1f1f1 00%, #e5e5e5 99%);
-	background : -o-linear-gradient(top, #f1f1f1 00%, #e5e5e5 99%);
-	background : -ms-linear-gradient(top, #f1f1f1 00%, #e5e5e5 99%);
-	background : -linear-gradient(top, #f1f1f1 00%, #e5e5e5 99%);
-	border-color: #aeaeae;
-	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+	background: 		-webkit-linear-gradient(top, #f1f1f1 00%, #e5e5e5 99%);
+	background: 		-moz-linear-gradient(top, #f1f1f1 00%, #e5e5e5 99%);
+	background: 		-o-linear-gradient(top, #f1f1f1 00%, #e5e5e5 99%);
+	background: 		-ms-linear-gradient(top, #f1f1f1 00%, #e5e5e5 99%);
+	background: 		-linear-gradient(top, #f1f1f1 00%, #e5e5e5 99%);
+	-moz-box-shadow: 	0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+	-webkit-box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+	box-shadow: 		0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+	border-color: 		#aeaeae;
 }
 
 .fc-state-down, .fc-state-active {
-	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: 	inset 0 1px 1px rgba(0, 0, 0, 0.1);
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
-	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
+	box-shadow: 		inset 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 .fc-state-disabled {
@@ -413,7 +406,6 @@ table.fc-border-separate {
 	vertical-align: middle;
 	text-align: right;
 	white-space: nowrap;
-	font-weight: normal;
 }
 
 .fc-agenda .fc-week-number {

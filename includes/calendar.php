@@ -1,50 +1,50 @@
 <link rel='stylesheet' type='text/css' href='../css/UIElements/fullcalendar.css' />
-<link rel='stylesheet' type='text/css' href='../css/UIElements/popup.css' />
 
 <script type='text/javascript' src='../js/fullcalendar.js'></script>
 <script type='text/javascript' src='../js/perfect-scrollbar.js'></script>
 
-<div class="popupBox" barColor="gold" id="event_info_popup" style="width: 436px; margin-left: -218px; height: 560px; margin-top: -230px;">
+<div class="popupBox" id="event_info_popup" style="width: 436px; margin-left: -218px; margin-top: -230px;">
 	<div class="boxheader">
 		<div class="title">
-			Event Information
+			<a class="no_effect" href="#" id="event_title_wrapper" title=" " style="text-decoration: none; cursor: default;">
+				<h1 class="ellipsis" style="max-width: 360px;" id="event_title"></h1>
+			</a>
 		</div>
 		<div class="x" onclick='killPopup("event_info_popup", "shade")'>
 			<img src="../images/x.png" />
 		</div>
+		
+		<br class="clear"/>
 	</div>
 	<div class="boxbody" style="padding: 20px;">
-		<a href="#" id="event_title_wrapper" title=" " style="text-decoration: none; cursor: default;">
-			<h1 class="h1Ellipsis" style="max-width: 380px;" id="event_title"></h1>
-		</a><br>
 		<table style="margin: 12px;" cellspacing="15px">
 			<tr valign="baseline">
-				<td width="70px"><h4>Where: </h4></td><td width="300px"><h4 id="event_where"></h4></td>
+				<td width="70px"><span>Where: </span></td><td width="300px"><span id="event_where"></span></td>
 			</tr>
 			<tr valign="baseline">
-				<td width="70px"><h4>When: </h4></td><td width="300px"><h4 id="event_when"></h4></td>
+				<td width="70px"><span>When: </span></td><td width="300px"><span id="event_when"></span></td>
 			</tr>
 			<tr valign="baseline">
-				<td width="70px"><h4>Type: </h4></td><td width="300px"><h4 id="event_type"></h4></td>
+				<td width="70px"><span>Type: </span></td><td width="300px"><span id="event_type"></span></td>
 			</tr>
 			<tr valign="baseline">
-				<td width="70px"><h4>What: </h4></td><td width="300px">
-				<div id="event_description_wrapper" style="height: 240px; position: relative; overflow: hidden;">
-					<h4 id="event_description"></h4>
-				</div></td>
-			</tr>
-			<tr>
-				<td colspan="2">
-					<div style="float:left;">
-						<img id="event_creator_sprite" style="width: 32px; height: 32px; float: left;" src="../images/profile_gold_on_blue.png" />
-						<div id="event_creator_wrapper" style="display: none; float: left; padding: 7px;">
-							<h5 id="event_creator"></h5>
-						</div>
+				<td width="70px"><span>What: </span></td>
+				<td width="300px">
+					<div id="event_description_wrapper" style="height: 100px; position: relative; overflow: hidden;">
+						<span id="event_description"></span>
 					</div>
-					<button class="APOButton" id="event_edit_submit" buttonColor="gray" type="button" style="float: right; vertical-align: middle;">Edit</button>
 				</td>
 			</tr>
 		</table>
+	</div>
+	<div class="boxfooter">
+		<div style="float:left;">
+			<div id="event_creator_wrapper" style="float: left;">
+				<h5 class="gray_dark" id="event_creator"></h5>
+			</div>
+		</div>
+		<button class="cyan" id="event_edit_submit" type="button" style="float: right; vertical-align: middle;">Edit</button>
+		<br class="clear">
 	</div>
 </div>
 
@@ -123,7 +123,7 @@
 				</div>
 			</div>
 			<span class="hint" style="margin: 30px 34px; float: left;">Time should be entered as <i>hh:mm</i>, like <i>01:25PM</i>.</span>
-			<button class="APOButton" id="edit_event_submit" buttonColor="blue" type="button" style="float: right; margin: 20px 40px;">Save</button>
+			<button class="blue" id="edit_event_submit" type="button" style="float: right; margin: 20px 40px;">Save</button>
 		</form>
 	</div>
 	<div class="boxfooter" style="margin: 29px;">
@@ -143,11 +143,11 @@
 		<span id="event_info_edit_error_message"></span>
 	</div>
 	<div class="boxfooter">
-		<button class="APOButton" id="event_info_edit_er_popup_close" buttonColor="gray" style="float: right; margin: 0px; 35px" type="button" onclick='killPopup("event_info_edit_error_popup", "shade")'>Ok</button>
+		<button class="gray" id="event_info_edit_er_popup_close" style="float: right; margin: 0px; 35px" type="button" onclick='killPopup("event_info_edit_error_popup", "shade")'>Ok</button>
 	</div>
 </div>
-<div id="shade" onclick='killAllPopups("shade")'></div>
 
+<div id="shade" onclick='killAllPopups("shade")'></div>
 
 
 <script>
@@ -167,11 +167,11 @@
 	
 		$('#event_title_wrapper').tipsy({gravity: 'n', title: 'title'});
 	
-		$('#calendar').fullCalendar({
+		$('.calendar').fullCalendar({
 			header: {
-				left: 'prev,next today',
+				left: 	'prev,next today',
 				center: 'title',
-				right: 'month,agendaWeek'
+				right: 	'month,agendaWeek'
 			},
 			
 			events: "../logic/get_calendar_events.php?opt=get_all",
@@ -214,7 +214,7 @@
 							$('#event_info_popup #event_type').text("Service Event to the World");
 						else
 							$('#event_info_popup #event_type').text(data.eventType + " Event");
-						$('#event_info_popup .boxheader').css("background", data.eventColor);
+						//$('#event_info_popup .boxheader').css("background", data.eventColor);
 						$('#event_info_popup #event_creator').text("Posted by " + data.eventCreator);
 						eventCreator = data.eventCreator;
 						
@@ -254,17 +254,6 @@
 	});
 
 	$('#event_description_wrapper').perfectScrollbar();
-	
-	var slideToggle = true;
-	
-	$('#event_creator_sprite').hover(function() {
-		if (slideToggle)
-			$('#event_creator_wrapper').show("slide", { direction: "left" }, 200);
-	}, 
-	function() {
-		if (slideToggle)
-			$('#event_creator_wrapper').hide("slide", { direction: "left" }, 200);
-	});
 	
 	$('#checkbox_all_day').click(function() {
 		if ($('#checkbox_all_day').is(":checked")) {
@@ -337,6 +326,6 @@
 	});
 	
 </script>
-<div id='calendar' style="margin-top: 24px;"></div>
+<div class='calendar'></div>
 
 

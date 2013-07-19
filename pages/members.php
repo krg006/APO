@@ -9,9 +9,7 @@
 	<?php
 		include '../includes/header.php';
 	?>
-	<script>
-		$('#membersLink').css("font-weight", "bold");
-	</script>
+	<script>$('#membersLink').css("color", "#1e59ae");</script>
 	
 	<div style="margin-top: 29px;" align="center">
 		<?php
@@ -22,6 +20,8 @@
 				include '../includes/registration_form.php';
 			}
 		?>
+		
+		<br class="clear">
 	</div>
 	
 </body>

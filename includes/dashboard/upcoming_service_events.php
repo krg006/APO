@@ -1,4 +1,4 @@
-<div class="APOPanel" color="gold" style="width: 620px; height: 409px;">
+<div class="APOPanel" color="gold" style="width: 620px;">
 	<div class="panelheader">
 		Upcoming Service Events
 	</div>

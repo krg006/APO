@@ -12,13 +12,12 @@
 			include '../includes/header.php';
 		}
 	?>
-	<script>
-		$('#calendarLink').css("font-weight", "bold");
-	</script>
+	<script>$('#calendarLink').css("color", "1e59ae");</script>
 	
-	<div id="body" align="center">
-		<h1>What's on our agenda?</h1>
+	<div class="body" align="center">
+		<h1>Calendar</h1>
 		<?php include '../includes/calendar.php'; ?>
+		<br class="clear">
 	</div>
 </body>
 </html>

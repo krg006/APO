@@ -39,7 +39,7 @@
 					Confirm password: <br>
 					<input class="APOInput" id="password_confirm" type="password" placeholder="Password" name="password_confirm" />
 				</li>
-				<button class="APOButton" id="register_submit" buttonColor="blue" type="button" style="float:right; margin-right: 40px;">Register</button>
+				<button class="blue" id="register_submit" type="button" style="float:right; margin-right: 40px;">Register</button>
 			</ul>
 		</form>
 	</div>
@@ -62,7 +62,7 @@
 		You will be notified via email when your account has been activated.
 	</div>
 	<div class="boxfooter">
-		<button class="APOButton" id="dialog_close" buttonColor="gray" style="float: right; margin: 0px; 35px" type="button" onclick='killPopup("registration_confirmation", "shade")'>Ok</button>
+		<button class="gray" id="dialog_close" style="float: right; margin: 0px; 35px" type="button" onclick='killPopup("registration_confirmation", "shade")'>Ok</button>
 	</div>
 </div>
 <div id="shade" onclick='killAllPopups("shade")'></div>

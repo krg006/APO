@@ -1,31 +1,25 @@
+* {
+	font-family: sans-serif;
+	font-weight: 300;
+}
+
 body {
 	background-color: #fbfbfb;
 	background-image: url(../../images/bg-top.png);
 	background-position: top;
 	background-repeat: repeat-x;
 }
-
-@font-face {
-	font-family: thin_font;
-	src: url(../../font/Roboto-Light.ttf) format('truetype');
-}
-
-@font-face {
-	font-family: thin_font;
-	src: url(../../font/Roboto-Regular.ttf) format('truetype');
-	font-weight: bold;
-}
-
 h1 {
-	font-family: thin_font;
-	font-weight: normal;
-	color: #1e59ae;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	font-size: 32px;
-	display: inline;
+	display: inline-block;
 	vertical-align: middle;
 	width: auto;
+	margin: 0;
 }
-h1.h1Ellipsis {
+
+h1.ellipsis {
 	white-space: nowrap;
 	display: inline-block;
 	overflow: hidden;
@@ -33,36 +27,32 @@ h1.h1Ellipsis {
 	margin: 0px;
 }
 h2 {
-	font-family: thin_font;
-	font-weight: normal;
-	color: #1e59ae;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	font-size: 24px;
 	display: inline;
 	vertical-align: middle;
 	width: auto;
 }
 h3 {
-	font-family: thin_font;
-	font-weight: normal;
-	color: #1e59ae;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	font-size: 20px;
 	display: inline;
 	vertical-align: middle;
 	width: auto;
 }
 h4 {
-	font-family: thin_font;
-	font-weight: normal;
-	color: #1e59ae;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	font-size: 16px;
 	display: inline;
 	vertical-align: middle;
 	width: auto;
 }
 h5 {
-	font-family: thin_font;
-	font-weight: normal;
-	color: #1e59ae;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	font-size: 15px;
 	display: inline;
 	vertical-align: middle;
@@ -71,17 +61,23 @@ h5 {
 p {
 	text-indent: 1.5em;
 	text-align: left;
-	font-family: "Helvetica";
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	line-height: 150%;
 	font-size: 15px;
 	vertical-align: middle;
 }
+
 a {
-	color: #000000;
+	color:	#000000;
 }
 a:hover {
-	color:#1e59ae;
+	color:	#1e59ae;
 }
+a.no_effect:hover {
+	color:	#000000;
+}
+
 .error a {
 	color: red;
 }
@@ -95,18 +91,20 @@ span.error {
 	display: none;
 }
 span.smallerror {
-	font-family: "Helvetica";
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	font-size: 12px;
 	color: red;
 	display: none;
 }
 span.hint {
-	font-family: "thin_font";
-	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	color: #555555;
 }
 span.nice {
-	font-family: "thin_font";
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	font-size: 13px;
 }
 span.nice a {
@@ -121,7 +119,6 @@ span.nice_big {
 	display: inline-block;
 	color: #fbfbfb;
 	font-size: 14px;
-	text-transform: uppercase;
 	font-family: thin_font;
 	padding: 10px;
 }
@@ -145,33 +142,31 @@ span[isclickable="true"].nice_big:hover {
 	margin-top: 20px;
 }
 
-a.navlist {
-	text-decoration: none;
-	font-family: thin_font;
-	color: black;
-	font-size: 18px;
-}
-
-#navlist {
+div.navigation {
 	overflow: auto;
 }
-
-#navlist ul {
-	margin:0;
-	padding:0;
-	list-style:none;
+div.navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
-
-#navlist li{
+div.navigation li {
 	width:170px;
 	list-style-type: none;
 	display:inline;
 	text-align:center;
-	padding-left: 20px;
+	margin-left: 20px;
 }
-
-#navlist li:hover a {
-	color: #1e59ae;
+div.navigation a {
+	text-decoration: none;
+	font: 17px "Open Sans", sans-serif;
+	font-weight: 300;
+	color: rgba(0,0,0,0.75);
+	text-transform: uppercase;
+}
+div.navigation li:hover a {
+	color: black;
+	transition: all 0.2s;
 }
 
 .divider{
@@ -180,6 +175,13 @@ a.navlist {
     top:10%;
     bottom:10%;
     border-left:1px solid #c8c8c8;
+}
+
+img.scalable {
+	max-width: 100%;
+	height: auto;
+	width: auto;
+	width: auto\9; /* ie8 */;
 }
 
 .notif_bar {
@@ -191,4 +193,7 @@ a.navlist {
 	border-bottom: 2px solid rgba(0,0,0,0.125);
 }
 
-
+br.clear {
+    clear:both;
+    line-height:0;
+}

@@ -1,87 +1,69 @@
 .popupBox {
-	display: none;
-	position: fixed;
-	left: 50%;
-	top: 50%;
-	padding-bottom: 12px;
-	background-color: #efefef;
-	z-index: 9991;
-	-moz-box-shadow: 0 0 5px #888888;
+	display: 			none;
+	position: 			fixed;
+	left: 				50%;
+	top: 				50%;
+	background-color: 	#ffffff;
+	z-index: 			9998;
+	-moz-box-shadow: 	0 0 5px #888888;
 	-webkit-box-shadow: 0 0 5px #888888;
-	box-shadow: 0 0 5px #888888;
+	box-shadow: 		0 0 5px #888888;
 }
 
 .popupBox > .boxheader {
-	background: #fab41d;
-	padding-left: 12px;
-	color: #fbfbfb;
-	font-size: 18px;
-	text-transform: uppercase;
-	font-family: thin_font;
-	text-align: left;
-	height: 34px;
-	border-bottom: 2px solid rgba(0,0,0,0.125);
-	cursor: move;
+	cursor: 	move;
 }
 
 .popupBox > .boxheader > .title {
-	display: inline;
-	float: left;
-	padding: 6px;
-}
-
-[barColor="gold"].popupBox > .boxheader {
-	background: #fab41d;
-}
-
-[barColor="blue"].popupBox > .boxheader {
-	background: #1e59ae;
-	border-bottom: 2px solid rgba(0,0,0,0.25);
-}
-
-[barColor="gray"].popupBox > .boxheader {
-	background: #222222;
-	border-bottom: 2px solid rgba(255,255,255,0.625);
+	display: 	inline;
+	float: 		left;
+	padding: 	20px;
 }
 
 .popupBox > .boxheader > .x {
-	display: inline;
-	float: right;
-	cursor: hand;
+	display: 	inline;
+	float: 		right;
+	cursor: 	hand;
 }
 
 .popupBox > .boxheader > .x img {
-	opacity: 0.50;
+	opacity: 	0.50;
 }
 
 .popupBox > .boxheader > .x:hover img {
-	opacity: 1.00;
-	background: rgba(255,255,255,0.125);
+	opacity: 	1.00;
+	background: rgba(0,0,0,0.125);
 }
 
 .popupBox > .boxbody {
 	clear: both;
-	padding: 10px;
-	color: #000000;
-	font-size: 14px;
-	font-family: Helvetica;
+	padding: 20px;
+	font-weight: 300;
 	text-align: left;
 }
 
+.boxbody span {
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	line-height: normal;
+}
+
 .popupBox > .boxfooter {
-	padding: 10px;
+	padding: 20px;
 	color: #333333;
 	font-size: 12px;
-	font-family: thin_font;
+	font-family: 'Roboto', sans-serif;
 	clear: both;
 }
 
 #shade {
 	 display: none; 
+	 z-index: 9997;
 	 position:fixed; 
 	 left:0; 
 	 right:0; 
 	 top:0; 
 	 bottom:0; 
-	 background-color: rgba(255,255,255,0);"
+	 background-color: rgba(255,255,255,0.25);
+	 transition: all 0.2s;
 }

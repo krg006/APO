@@ -1,7 +1,8 @@
-input.APOInput {
+input {
 	width: 336px;
 	height: 38px;
-	font-family: Arial;
+	font-family: sans-serif;
+	font-weight: 200;
 	font-size: 14px;
 	display: block;
 	padding: 0 10px 0 10px;
@@ -10,7 +11,7 @@ input.APOInput {
 	background: #ffffff;
 }
 
-input.APOInput:hover {
+input:hover {
 	outline: none;
 	border: 1px solid #c4c3be;
 	color: #005791;
@@ -19,16 +20,17 @@ input.APOInput:hover {
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
-input.APOInput:focus {
+input:focus {
 	outline: none;
-	border:1px solid #fab41d;
+	border:1px solid #999999;
 	color: #000000;
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 	box-shadow: none;
+	transition: all 0.2s;
 }
 
-input.APOInput:disabled {
+input:disabled {
 	background: rgba(255,255,255,0.50);
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
