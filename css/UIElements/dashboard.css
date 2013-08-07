@@ -1,20 +1,27 @@
-.dashboard {
-	margin: 20 auto;
+div.dashboardWrapper {
+	width: 			874px;
+	padding-top: 	12px;
+	margin:			0px auto;
+}
+
+div.dashboard {
+	margin-top: 	24px;
 }
 
 ul.left {
-	height: 		100%;
-	float: 			left;
-	padding: 		0;
-	list-style: 	none;
-	margin-right: 	20px;
+	width: 		26.5%;
+	float: 		left;
+	padding: 	0px;
+	list-style: none;
+	margin: 	0px 20px 0px 0px;
 }
 
 ul.right {
-	height: 	100%;
+	width: 		71.2%;
 	float: 		left;
-	padding: 	0;
+	padding: 	0px;
 	list-style: none;
+	margin: 	0px;
 }
 
 ul.right li {
@@ -22,118 +29,120 @@ ul.right li {
 }
 
 .APOPanel {
-	display: inline-block;
-	background-color: #efefef;
-	border: 1px solid #c4c3be;
+	width: 				100%;
+	display: 			inline-block;
+	background-color: 	#efefef;
+	border: 			1px solid #c4c3be;
 }
 
 .APOPanel > .panelheader {
-	padding: 12px;
-	color: #444444;
-	font-size: 21px;
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 300;
-	text-align: left;
+	padding: 		12px;
+	color: 			#444444;
+	font-size: 		21px;
+	font-family: 	'Open Sans', sans-serif;
+	font-weight: 	300;
+	text-align: 	left;
 }
 
 .APOPanel > .panelbody {
-	color: #000000;
-	font-size: 14px;
-	font-family: thin_font;
-	text-align: left;
+	color: 			#000000;
+	font-size: 		14px;
+	font-family: 	sans-serif;
+	font-weight: 	300;
+	text-align: 	left;
 }
 
 .APOPanel > .panelfooter {
-	padding: 10px;
-	color: #333333;
-	font-size: 12px;
-	text-align: right;
-	font-family: thin_font;
-	clear: both;
+	padding: 		10px;
+	color: 			#333333;
+	font-size: 		12px;
+	text-align: 	right;
+	font-family: 	sans-serif;
+	font-weight: 	300;
+	clear: 			both;
 }
 
 .hoverpic {
-	height: 180px;
-	width: 180px;
-	margin: 10px;
-	overflow: hidden;
-	position: relative;
+	height: 	180px;
+	width: 		180px;
+	margin: 	10px;
+	overflow: 	hidden;
+	position: 	relative;
 }
 
 .hoveroverlay {
-	background-color: rgba(251, 251, 251, 0.8);
-	bottom: 0;
-	font-family: sans-serif;
-	font-weight: 300;
-	color: #333333;
-	font-size: 15px;
-	padding: 3px;
-	opacity: 0;
-	filter: alpha(opacity = 0);
-	position: absolute;
-	width: 100%;
-	z-index: 1000;
+	width: 				100%;
+	background-color: 	rgba(251, 251, 251, 0.8);
+	bottom: 			0px;
+	font-family: 		sans-serif;
+	font-weight: 		300;
+	color: 				#333333;
+	font-size: 			15px;
+	padding: 			3px;
+	opacity: 			0;
+	filter: 			alpha(opacity = 0);
+	position: 			absolute;
+	z-index: 			1000;
 }
 
 .hoverpic:hover .hoveroverlay, .hoverpic:focus .hoveroverlay {
-	opacity: 1.0;
-	filter: alpha(opacity = 100);
+	opacity: 	1.0;
+	filter: 	alpha(opacity = 100);
 	transition: all 0.2s;
 }
 
 div.navbar {
-	position: absolute;
-	bottom: 0px;
-	width: 230px;
+	position: 	absolute;
+	bottom: 	0px;
+	width: 		230px;
 }
 
 div.navbar ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
-	float: left;
-	width: 100%;
-	font-size: 13px;
-	font-family: sans-serif;
-	font-weight: 300;
+	width: 			100%;
+	list-style: 	none;
+	padding: 		0px;
+	margin: 		0px;
+	float: 			left;
+	font-size: 		13px;
+	font-family: 	sans-serif;
+	font-weight: 	300;
 }
 
 div.navbar ul li a {
-	display: block;
-	text-decoration: none;
-	color: rgba(0,0,0,0.75);
-	border-top-style: solid;
-	border-top-width: 1px;
-	border-top-color: #cccccc;
-	padding: 8px 0px 8px 10px;
-	cursor: pointer;
+	display: 			block;
+	text-decoration: 	none;
+	color: 				rgba(0,0,0,0.75);
+	border-top-style: 	solid;
+	border-top-width: 	1px;
+	border-top-color: 	#cccccc;
+	padding: 			8px 0px 8px 10px;
+	cursor: 			pointer;
 }
 
 div.navbar ul li a:hover {
-	color: #000000;
-	background-color: rgba(0,0,0,0.05);
-	transition: all 0.1s;
+	color: 				#000000;
+	background-color: 	rgba(0,0,0,0.05);
+	transition: 		all 0.1s;
 }
 
 div.navbar ul li a:active {
-	background-color: rgba(0,0,0,0.025);
-	transition: all 0.1s;
+	background-color: 	rgba(0,0,0,0.025);
+	transition: 		all 0.1s;
 }
 
 div.scroll-pane {
-	position: relative;
-	padding: 0px;
-	width: 410px;
-	overflow: hidden;
+	position: 	relative;
+	padding: 	0px;
+	width: 		410px;
+	overflow: 	hidden;
 }
 
 .profile_bar {
-	position: relative;
-	background-color: #efefef;
-	width: 622px;
-	height: 32px;
-	margin: 0px -8px 0px -8px;
-	border: 1px solid #c4c3be;
+	width: 				100%;
+	position: 			relative;
+	background-color: 	#efefef;
+	height: 			32px;
+	border: 			1px solid #c4c3be;
 }
 
 .profile_bar span {
@@ -141,19 +150,19 @@ div.scroll-pane {
 }
 
 .profile_bar span.navbar {
-	font-size: 13px;
-	color: rgba(0,0,0,0.75);
+	font-size: 	13px;
+	color: 		rgba(0,0,0,0.75);
 }
 
 .profile_bar span.navbar:hover {
-	color: #000000;
-	background-color: rgba(0,0,0,0.05);
-	transition: all 0.1s;
+	color: 				#000000;
+	background-color: 	rgba(0,0,0,0.05);
+	transition: 		all 0.1s;
 }
 
 .profile_bar span.navbar:active {
-	background-color: rgba(0,0,0,0.025);
-	transition: all 0.1s;
+	background-color: 	rgba(0,0,0,0.025);
+	transition: 		all 0.1s;
 }
 
 li#profile_card {
@@ -175,5 +184,15 @@ li#profile_card {
 	
 	ul.right {
 		float: none;
+		width: 100%;
+	}
+	div.dashboardWrapper {
+		width: 622px;
+	}
+}
+
+@media screen and (max-width: 730px) {
+	div.header {
+		width: 100%;
 	}
 }

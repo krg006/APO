@@ -1,8 +1,14 @@
-.APOShadowbox {
+div.loginWrapper {
+	width: 418px;
+	padding-top: 32px;
+	margin: 0 auto;
+}
+
+div.APOShadowbox {
 	width: auto;
 	overflow: auto;
 	background-color: #efefef;
-	margin: 40px auto; 
+	margin: 20px auto; 
 	padding: 40px;
 	border: 1px solid #c4c3be;
 }

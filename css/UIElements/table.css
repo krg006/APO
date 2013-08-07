@@ -1,52 +1,96 @@
-.APOTableHeader {
+div.APOTableHeader {
+	width:		100%;
+	height: 	40px;
 	background: #dedede; 
-	border: 1px solid #cccccc; 
+	border: 	1px solid #cccccc; 
 	margin-top: 20px;
-	height: 40px;
 }
 
-.APOTableLabel {
-	line-height: 40px; 
-	float:left; 
-	padding-left: 10px; 
-	font-weight: 400;
-	height: 40px;
+
+div.APOTableRow {
+	height: 				40px; 
+	width:					100%;
+	background: 			#f9f9f9;
+	border-bottom-color: 	#EAE7DF;
+	border-bottom-style: 	solid;
+	border-bottom-width: 	1px;
+	font-size: 				13px;
+	-webkit-box-shadow: 	inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+    box-shadow: 			inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+}
+div.APOTableRow button.ghost {
+	display: 	none;
+}
+div.APOTableRow.zebra {
+	background:	#FFFAEF;
+}
+div.APOTableRow:hover {
+	background: #F3F3F3;
+}
+div.APOTableRow.zebra:hover {
+	background:	#FFF4DD;
 }
 
-.APOTableRow {
-	height: 40px; 
-	background: #f9f9f9;
-	border-bottom-color: #e5e5e5;
-	border-bottom-style: solid;
-	border-bottom-width: 1px;
-	font-size: 13px;
+
+div.APOTableLabel {
+	height: 		40px;
+	line-height: 	40px; 
+	float:			left; 
+	padding-left: 	10px; 
+	font-weight: 	400;
+}
+div.APOTableLabel span.logbook-eventName {
+	width:			75.5%;
+	white-space: 	nowrap;
+	display: 		inline-block;
+	overflow: 		hidden;
+	text-overflow: 	ellipsis;
+	margin: 		0px;
+}
+div.APOTableLabel.logbook-eventName {
+	width:	67.8%;
+}
+div.APOTableLabel.logbook-eventDate, div.APOTableLabel.logbook-eventHours {
+	width:	12.19%
 }
 
-.APOTableLabel > span {
-	white-space: nowrap;
+div.APOTableLabel span.upcoming-eventName {
+	width:			70%;
+	white-space: 	nowrap;
+	display: 		inline-block;
+	overflow: 		hidden;
+	text-overflow: 	ellipsis;
+	margin: 		0px;
+}
+div.APOTableLabel.upcoming-eventName {
+	width:	50%;
+}
+div.APOTableLabel.upcoming-eventLocation {
+	width:	22%;
+}
+div.APOTableLabel.upcoming-eventDate {
+	width:	8%
+}
+div.APOTableLabel.upcoming-eventTime {
+	width:	12%;
+}
+div.APOTableRow:hover button.ghost {
 	display: inline-block;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	margin: 0px;
 }
 
-.APOTableRow:hover {
-	background: #f6f6f6;
-}
-
-.APOTableRow:hover .APOTableRowButton {
-	display: inline;
-}
 
 .APOTableRowButton {
-	float: right; 
-	margin: 2px;
-	width:0px; 
-	height:0px; 
-	padding: 17 12;
-	opacity: 0.3;
-	filter:alpha(opacity=30);
-	display:none;
+	float: 		right; 
+	margin: 	2px;
+	width:		0px; 
+	height:		0px; 
+	padding:	17px 12px;
+	opacity: 	0.3;
+	filter:		alpha(opacity=30);
+	display:	none;
+}
+div.APOTableRow:hover .APOTableRowButton {
+	display: inline;
 }
 
 .APOTableRowButton:hover {

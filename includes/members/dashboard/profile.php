@@ -82,7 +82,7 @@
 
 <div id="shade" onclick='killAllPopups("shade")'></div>
 
-<div class="APOPanel" id="panel_profile" style="width: 230px; position: relative;">
+<div class="APOPanel" id="panel_profile" style="width: 230px;">
 	<div class="panelheader">
 		<?php echo user_get_first_name($_SESSION['username']).' '.user_get_last_name($_SESSION['username']); ?>
 	</div>
@@ -109,9 +109,6 @@
 		    		</li>
 		    		<li>
 		    			<a href="#">Make blog post</a>
-		    		</li>
-		    		<li>
-		    			<a href="../pages/logout.php">Log out</a>
 		    		</li>
 		    	</ul>
 	    	</div>

@@ -3,21 +3,29 @@
 	include '../includes/head.php'; 
 ?>
 
+<link rel='stylesheet' type='text/css' href='../css/UIElements/fullcalendar.css' />
+
+<script type='text/javascript' src='../js/fullcalendar.js'></script>
+<script type='text/javascript' src='../js/perfect-scrollbar.js'></script>
+
 <body>
 	
-	<?php
-		if (logged_in()) {
-			include '../includes/header_logged_in.php';
-		} else {
-			include '../includes/header.php';
-		}
-	?>
-	<script>$('#calendarLink').css("color", "1e59ae");</script>
+	<?php include '../includes/header.php';?>
+	<script>
+		$('#calendarLink').addClass("buttonPressed");</script>
+	</script>
 	
-	<div class="body" align="center">
-		<h1>Calendar</h1>
-		<?php include '../includes/calendar.php'; ?>
+	<?php include '../includes/calendar/event_info_popup.php'?>
+	<?php include '../includes/calendar/edit_event_popup.php'?>
+	<?php include '../includes/calendar/event_edit_error_popup.php'?>
+	<div id="shade" onclick='killAllPopups("shade")'></div>
+	
+	<?php include '../includes/calendar/calendar_js.php'?>
+	
+	<div class="calendarWrapper mainContent" align="center">
+		<h1 style="float:left">Calendar</h1>
 		<br class="clear">
+		<div class="calendar"></div>
 	</div>
 </body>
 </html>

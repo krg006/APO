@@ -5,15 +5,9 @@
 
 <body>
 	
-	<?php
-		if (logged_in()) {
-			include '../includes/header_logged_in.php';
-		} else {
-			include '../includes/header.php';
-		}
-	?>
+	<?php include '../includes/header.php';?>
 	<script>
-		$('#homeLink').css("color", "1e59ae");
+		$('#homeLink').addClass("buttonPressed");
 		
 		$(function() {
 			$("#slideshow > div:gt(0)").hide();

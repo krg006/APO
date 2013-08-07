@@ -1,11 +1,11 @@
 .ps-container .ps-scrollbar-x {
     position: absolute; /* please don't change 'position' */
     bottom: 3px; /* there must be 'bottom' for ps-scrollbar-x */
-    height: 8px;
-    background-color: #aaa;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
+    height: 7px;
+    background-color: #CCCCCC;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
     opacity: 0;
     filter: alpha(opacity = 0);
     -webkit-transition: opacity.2s linear;
@@ -32,11 +32,11 @@
 .ps-container .ps-scrollbar-y {
     position: absolute; /* please don't change 'position' */
     right: 3px; /* there must be 'right' for ps-scrollbar-y */
-    width: 8px;
-    background-color: #aaa;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
+    width: 7px;
+    background-color: #CCCCCC;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
     opacity: 0;
     filter: alpha(opacity = 0);
     -webkit-transition: opacity.2s linear;

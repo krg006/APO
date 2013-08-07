@@ -1,3 +1,4 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
@@ -32,7 +33,6 @@
 	<script type="text/javascript" src="../js/perfect-scrollbar.js"></script>
 	<script type="text/javascript" src="../js/popups.js"></script>
 	<script type="text/javascript" src="../js/jquery.tipsy.js"></script>
-	<script type="text/javascript" src="../js/jquery.stickyPanel.js"></script>
 	
 	<title>Alpha Phi Omega | Iota Kappa Chapter</title>
 </head>

@@ -5,24 +5,16 @@
 ?>
 
 <body>
+	<?php include '../includes/header.php';?>
+	<script>$('#membersLink').addClass("buttonPressed");</script>
 	
 	<?php
-		include '../includes/header.php';
+		if (logged_in()) {
+			include '../includes/members/dashboard/dashboard.php';
+		} else {
+			include '../includes/members/login_form.php';
+			include '../includes/members/registration_form.php';
+		}
 	?>
-	<script>$('#membersLink').css("color", "#1e59ae");</script>
-	
-	<div style="margin-top: 29px;" align="center">
-		<?php
-			if (logged_in()) {
-				include '../includes/dashboard/dashboard.php';
-			} else {
-				include '../includes/login_form.php';
-				include '../includes/registration_form.php';
-			}
-		?>
-		
-		<br class="clear">
-	</div>
-	
 </body>
 </html>

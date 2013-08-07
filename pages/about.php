@@ -5,14 +5,8 @@
 
 <body>
 	
-	<?php
-		if (logged_in()) {
-			include '../includes/header_logged_in.php';
-		} else {
-			include '../includes/header.php';
-		}
-	?>
-	<script>$('#aboutLink').css("color", "1e59ae");</script>
+	<?php include '../includes/header.php';?>
+	<script>$('#aboutLink').addClass("buttonPressed");</script>
 	
 	<div id="body" align="center">
 		<div id="aboutus" align="center">
